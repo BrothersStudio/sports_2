@@ -17,14 +17,14 @@ public class ClickAndDrag : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = Vector2.ClampMagnitude(GetComponent<Rigidbody2D>().velocity, 1);
 
         Vector3[] positions = {Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position};
-        positions[0].z = -1;
+        positions[0].z = -9;
         drag_indicator.GetComponent<LineRenderer>().SetPositions(positions);
     }
 
     private void OnMouseUp()
     {
         drag_indicator.SetActive(false);
-        Vector3[] positions = { new Vector3(0, 0, 0), new Vector3(0, 0, 0) };
+        Vector3[] positions = { new Vector3(0, 0, -9), new Vector3(0, 0, -9) };
         drag_indicator.GetComponent<LineRenderer>().SetPositions(positions);
 
         GetComponent<Rigidbody2D>().velocity = Vector3.Normalize(transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition)) * speed;
