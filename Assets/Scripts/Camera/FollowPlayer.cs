@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    float follow_speed = 0.5f;
+    float follow_speed = 0.8f;
     public Transform player;
 
     float trauma = 0;
