@@ -28,6 +28,5 @@ public class ClickAndDrag : MonoBehaviour
         drag_indicator.GetComponent<LineRenderer>().SetPositions(positions);
 
         GetComponent<Rigidbody2D>().velocity = Vector3.Normalize(transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition)) * speed;
-        GetComponent<WreckingBall>().Fired();
     }
 }
