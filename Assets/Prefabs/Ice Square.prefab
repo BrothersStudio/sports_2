@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5162816323783234490}
   m_Layer: 0
   m_Name: Ice Square
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +100,8 @@ MonoBehaviour:
   brushed_friction: 0.2
   brushed_color: {r: 0.16078432, g: 0.6784314, b: 1, a: 1}
   unbrushed_color: {r: 1, g: 0.9450981, b: 0.909804, a: 1}
+  position: {x: 0, y: 0}
+  neighbors: []
 --- !u!61 &5162816323783234490
 BoxCollider2D:
   m_ObjectHideFlags: 0
