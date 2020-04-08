@@ -648,6 +648,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active_ball: {fileID: 779412472}
   brushing: 0
+  brush_particles: {fileID: 7147970377555937152, guid: 94f333e02251f5a46b8b3a6359a863d2,
+    type: 3}
 --- !u!1 &1386333280
 GameObject:
   m_ObjectHideFlags: 0

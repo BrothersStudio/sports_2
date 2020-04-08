@@ -75,6 +75,8 @@ public class Ice : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Color.Lerp(unbrushed_color, brushed_color, GetBrushedNeighbors() / 8f);
 
+            brush.SpawnBrushParticles();
+
             brushed = true;
             current_friction = brushed_friction;
         }
