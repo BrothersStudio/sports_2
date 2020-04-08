@@ -98,8 +98,10 @@ MonoBehaviour:
   size: 20
   starting_friction: 0.6
   brushed_friction: 0.2
+  brushed: 0
   brushed_color: {r: 0.16078432, g: 0.6784314, b: 1, a: 1}
   unbrushed_color: {r: 1, g: 0.9450981, b: 0.909804, a: 1}
+  brush_force: 10
   position: {x: 0, y: 0}
   neighbors: []
 --- !u!61 &5162816323783234490

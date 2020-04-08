@@ -16,6 +16,7 @@ public class Ice : MonoBehaviour
     public Color unbrushed_color;
 
     private Brush brush;
+    public float brush_force;
 
     public Vector2 position = new Vector2();
 
@@ -28,26 +29,35 @@ public class Ice : MonoBehaviour
 
         current_friction = starting_friction;
 
-        neighbor_vectors.Add(new Vector2(0, size / 100f));  // north
-        neighbor_vectors.Add(new Vector2(size / 100f * 1.4f, size / 100f * 1.4f));  // northeast
-        neighbor_vectors.Add(new Vector2(size / 100f, 0));  // east
-        neighbor_vectors.Add(new Vector2(size / 100f * 1.4f, size / 100f * -1.4f)); // southeast
-        neighbor_vectors.Add(new Vector2(0, -size / 100f));  // south
+        neighbor_vectors.Add(new Vector2(0, size / 100f));                            // north
+        neighbor_vectors.Add(new Vector2(size / 100f * 1.4f, size / 100f * 1.4f));    // northeast
+        neighbor_vectors.Add(new Vector2(size / 100f, 0));                            // east
+        neighbor_vectors.Add(new Vector2(size / 100f * 1.4f, size / 100f * -1.4f));   // southeast
+        neighbor_vectors.Add(new Vector2(0, -size / 100f));                           // south
         neighbor_vectors.Add(new Vector2(size / 100f * -1.4f, size / 100f * -1.4f));  // southwest
-        neighbor_vectors.Add(new Vector2(size / 100f * -1.4f, 0));  // west
-        neighbor_vectors.Add(new Vector2(size / 100f * -1.4f, size / 100f * 1.4f)); // northwest
+        neighbor_vectors.Add(new Vector2(size / 100f * -1.4f, 0));                    // west
+        neighbor_vectors.Add(new Vector2(size / 100f * -1.4f, size / 100f * 1.4f));   // northwest
     }
 
     public void CalculateNeighbors()
     {
         foreach (Vector3 vector in neighbor_vectors)
         {
-            foreach (Collider2D collider in Physics2D.OverlapPointAll(transform.position + vector))
+            bool found_ice = false;
+            Collider2D[] colliders = Physics2D.OverlapPointAll(transform.position + vector);
+            foreach (Collider2D collider in colliders)
             {
                 if (collider.tag == "Ice")
                 {
                     neighbors.Add(collider.GetComponent<Ice>());
+                    found_ice = true;
+                    break;
                 }
+            }
+
+            if (!found_ice)
+            {
+                neighbors.Add(null);
             }
         }
     }
@@ -86,5 +96,23 @@ public class Ice : MonoBehaviour
     public float GetFriction()
     {
         return current_friction;
+    }
+
+    public Vector2 GetForce()
+    {
+        Vector3 total_force = Vector2.zero;
+
+        for (int i = 0; i < neighbors.Count; i++)
+        {
+            if (neighbors[i] != null)
+            {
+                if (neighbors[i].GetFriction() < GetFriction())
+                {
+                    total_force += neighbor_vectors[i];
+                }
+            }
+        }
+
+        return total_force * brush_force;  // can be implicitly turned into vec2
     }
 }
