@@ -71,23 +71,34 @@ public class Ice : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && brush.brushing && !brushed)
         {
-            GetComponent<SpriteRenderer>().color = Color.Lerp(unbrushed_color, brushed_color, GetBrushedNeighbors() / 8f);
-
-            brush.SpawnBrushParticles();
-
-            brushed = true;
-            current_friction = brushed_friction;
+            Brush();
         }
+    }
+
+    public void Brush(bool init = false)
+    {
+        GetComponent<SpriteRenderer>().color = Color.Lerp(unbrushed_color, brushed_color, GetBrushedNeighbors() / 9f);
+
+        if (!init)
+        {
+            brush.SpawnBrushParticles();
+        }
+
+        brushed = true;
+        current_friction = brushed_friction;
     }
 
     private int GetBrushedNeighbors()
     {
-        int count = 0;
+        int count = 1;
         foreach (Ice ice in neighbors)
         {
-            if (ice.brushed)
+            if (ice != null)
             {
-                count++;
+                if (ice.brushed)
+                {
+                    count++;
+                }
             }
         }
         return count;

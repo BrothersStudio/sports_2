@@ -30,7 +30,7 @@ public class TrackScore : MonoBehaviour
         goal_pos.z = 0;
 
         float distance = Vector3.Distance(goal_pos, ball_pos);
-        float score = Mathf.Clamp(score_multiplier - (distance / 19.5f) * score_multiplier, 0, score_multiplier);
+        float score = Mathf.Clamp(score_multiplier - (distance / 39.79f) * score_multiplier, 0, score_multiplier);
         GetComponent<Text>().text = score.ToString("0.");
     }
 }

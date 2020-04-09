@@ -20,7 +20,8 @@ public class Brush : MonoBehaviour
 
     private void Update()
     {
-        if (active_ball.velocity.magnitude > 0.01f)
+        if (active_ball.velocity.magnitude > 0.01f &&
+            !active_ball.GetComponent<Launch>().launching)
         {
             brushing = true;
         }

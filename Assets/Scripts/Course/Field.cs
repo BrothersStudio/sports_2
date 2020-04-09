@@ -23,12 +23,6 @@ public class Field : MonoBehaviour
                 GameObject ice = Instantiate(ice_square, position, Quaternion.identity, transform);
                 ice.name = "Ice " + j.ToString() + " " + i.ToString();
                 ice.GetComponent<Ice>().SetBrush(brush);
-
-                if (i > 4 && i < 7)
-                {
-                    ice.GetComponent<Ice>().SetSlopeDirection(SlopeDirection.North);
-                }
-
                 all_ice.Add(ice);
             }
         }
@@ -36,6 +30,10 @@ public class Field : MonoBehaviour
         foreach (GameObject ice in all_ice)
         {
             ice.GetComponent<Ice>().CalculateNeighbors();
+            if (Random.value < 0.15f)
+            {
+                ice.GetComponent<Ice>().Brush(true);
+            }
         }
     }
 }

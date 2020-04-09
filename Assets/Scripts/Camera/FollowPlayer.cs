@@ -16,6 +16,7 @@ public class FollowPlayer : MonoBehaviour
 
     void Start()
     {
+        default_position = transform.position;
         default_rotation = transform.rotation;
     }
 
@@ -46,9 +47,11 @@ public class FollowPlayer : MonoBehaviour
         }
         else
         {
-            // Might want to follow the mouse a little as well
-            float new_x = transform.position.x * (1 - follow_speed) + player.position.x * follow_speed;
             float new_y = transform.position.y * (1 - follow_speed) + player.position.y * follow_speed;
+
+            float new_x = default_position.x;
+            //new_x = transform.position.x * (1 - follow_speed) + player.position.x * follow_speed;
+
             transform.position = new Vector3(new_x, new_y, -10);
         }
     }
