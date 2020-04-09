@@ -13,23 +13,23 @@ public class Field : MonoBehaviour
     private void Awake()
     {
         List<GameObject> all_ice = new List<GameObject>();
-        int col = 0;
         float x_distance = ice_square.GetComponent<Ice>().size / 100f;
         float y_distance = ice_square.GetComponent<Ice>().size / 100f;
         for (float i = lower_left_point.y; i < lower_left_point.y + field_size.y * y_distance; i += y_distance)
         {
-            col++;
-            int row = 0;
             for (float j = lower_left_point.x; j < lower_left_point.x + field_size.x * x_distance; j += x_distance)
             {
-                
                 Vector3 position = new Vector3(j, i, 0);
                 GameObject ice = Instantiate(ice_square, position, Quaternion.identity, transform);
                 ice.name = "Ice " + j.ToString() + " " + i.ToString();
-                ice.GetComponent<Ice>().SetBrushAndPosition(brush, row, col);
-                all_ice.Add(ice);
+                ice.GetComponent<Ice>().SetBrush(brush);
 
-                row++;
+                if (i > 4 && i < 7)
+                {
+                    ice.GetComponent<Ice>().SetSlopeDirection(SlopeDirection.North);
+                }
+
+                all_ice.Add(ice);
             }
         }
 

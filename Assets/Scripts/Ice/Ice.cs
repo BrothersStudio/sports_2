@@ -8,20 +8,20 @@ public class Ice : MonoBehaviour
 
     public float starting_friction;
     public float brushed_friction;
-
-    public bool brushed = false;
     private float current_friction;
 
     public Color brushed_color;
     public Color unbrushed_color;
 
+    public bool brushed = false;
     private Brush brush;
     public float brush_force;
 
-    public Vector2 position = new Vector2();
-
-    public List<Ice> neighbors;
+    public List<Ice> neighbors = new List<Ice>();
     private List<Vector3> neighbor_vectors = new List<Vector3>();
+
+    private SlopeDirection slope;
+    public float slope_force;
 
     private void Awake()
     {
@@ -62,11 +62,9 @@ public class Ice : MonoBehaviour
         }
     }
 
-    public void SetBrushAndPosition(Brush brush, int row, int col)
+    public void SetBrush(Brush brush)
     {
         this.brush = brush;
-        position.x = row;
-        position.y = col;
     }
 
     private void OnMouseEnter()
@@ -102,7 +100,7 @@ public class Ice : MonoBehaviour
 
     public Vector2 GetForce()
     {
-        Vector3 total_force = Vector2.zero;
+        Vector3 neighbor_force = Vector2.zero;
 
         for (int i = 0; i < neighbors.Count; i++)
         {
@@ -110,11 +108,47 @@ public class Ice : MonoBehaviour
             {
                 if (neighbors[i].GetFriction() < GetFriction())
                 {
-                    total_force += neighbor_vectors[i];
+                    neighbor_force += neighbor_vectors[i];
                 }
             }
         }
 
-        return total_force * brush_force;  // can be implicitly turned into vec2
+        return neighbor_force * brush_force + GetSlopeDirection() * slope_force; 
     }
+
+    public void SetSlopeDirection(SlopeDirection slope)
+    {
+        this.slope = slope;
+
+        if (slope != SlopeDirection.None)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
+    }
+
+    private Vector3 GetSlopeDirection()
+    {
+        switch (slope)
+        {
+            case SlopeDirection.North:
+                return Vector3.up;
+            case SlopeDirection.East:
+                return Vector3.right;
+            case SlopeDirection.South:
+                return Vector3.down;
+            case SlopeDirection.West:
+                return Vector3.left;
+            default:  // No slope
+                return Vector3.zero;
+        }
+    }
+}
+
+public enum SlopeDirection
+{
+    None,
+    North,
+    East,
+    South,
+    West
 }
