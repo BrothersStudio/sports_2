@@ -20,6 +20,11 @@ public class FollowPlayer : MonoBehaviour
         default_rotation = transform.rotation;
     }
 
+    public void RegisterNewBall(Transform new_ball)
+    {
+        player = new_ball;
+    }
+
     public void Shake(float amount)
     {
         trauma += amount;

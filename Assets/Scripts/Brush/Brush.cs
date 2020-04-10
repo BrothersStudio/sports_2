@@ -18,9 +18,14 @@ public class Brush : MonoBehaviour
         main_camera = Camera.main;
     }
 
+    public void RegisterNewBall(Transform new_ball)
+    {
+        active_ball = new_ball.GetComponent<Rigidbody2D>();
+    }
+
     private void Update()
     {
-        if (active_ball.velocity.magnitude > 0.01f &&
+        if (active_ball.velocity.magnitude > 0.1f &&
             !active_ball.GetComponent<Launch>().launching)
         {
             brushing = true;
