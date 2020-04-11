@@ -22,6 +22,7 @@ public class FollowPlayer : MonoBehaviour
 
     public void RegisterNewBall(Transform new_ball)
     {
+        // Move more slowly to new ball
         player = new_ball;
     }
 

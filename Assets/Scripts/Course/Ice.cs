@@ -10,12 +10,10 @@ public class Ice : MonoBehaviour
     public float brushed_friction;
     private float current_friction;
 
-    public Color brushed_color;
-    public Color unbrushed_color;
-
     public bool brushed = false;
     private Brush brush;
     public float brush_force;
+    public SpriteRenderer brushed_mask;
 
     public List<Ice> neighbors = new List<Ice>();
     private List<Vector3> neighbor_vectors = new List<Vector3>();
@@ -77,7 +75,9 @@ public class Ice : MonoBehaviour
 
     public void Brush(bool init = false)
     {
-        GetComponent<SpriteRenderer>().color = Color.Lerp(unbrushed_color, brushed_color, GetBrushedNeighbors() / 9f);
+        Color brushed_mask_color = brushed_mask.color;
+        brushed_mask_color.a = GetBrushedNeighbors() / 9f;
+        brushed_mask.color = brushed_mask_color;
 
         if (!init)
         {

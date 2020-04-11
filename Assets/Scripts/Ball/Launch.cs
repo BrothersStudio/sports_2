@@ -9,7 +9,7 @@ public class Launch : MonoBehaviour
     public float launch_velocity;
 
     private float launch_time;
-    private float click_sanctuary = 1f;
+    private float click_release_sanctuary = 0.5f;
 
     private void OnMouseDown()
     {
@@ -23,7 +23,7 @@ public class Launch : MonoBehaviour
     {
         if (launching)
         {
-            if (!Input.GetMouseButton(0) && Time.timeSinceLevelLoad > launch_time + click_sanctuary)
+            if (!Input.GetMouseButton(0) && Time.timeSinceLevelLoad > launch_time + click_release_sanctuary)
             {
                 StopLaunching();
                 return;

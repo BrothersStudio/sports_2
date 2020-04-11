@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Brush : MonoBehaviour
 {
-    public Rigidbody2D active_ball;
+    private Rigidbody2D active_ball;
     private Camera main_camera;
 
     public bool brushing = false;

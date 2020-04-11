@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallSpawner : MonoBehaviour
 {
-    public Vector3 spawn_location;
+    public Vector2 spawn_location;
 
     private int ball_count = 0;
     private List<GameObject> active_balls = new List<GameObject>();
@@ -23,7 +23,8 @@ public class BallSpawner : MonoBehaviour
     {
         ball_count++;
 
-        GameObject new_ball = Instantiate(ball_prefab, spawn_location, Quaternion.identity);
+        Vector3 total_spawn_location = new Vector3(spawn_location.x, spawn_location.y, ball_prefab.transform.position.z);
+        GameObject new_ball = Instantiate(ball_prefab, total_spawn_location, Quaternion.identity);
 
         main_camera.RegisterNewBall(new_ball.transform);
         score_tracker.RegisterNewBall(new_ball.transform);
