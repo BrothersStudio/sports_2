@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    float follow_speed = 0.9f;
+    float current_speed;
+    float slow_speed = 0.05f;
+    float fast_speed = 0.9f;
     public Transform player;
 
     float trauma = 0;
@@ -16,13 +18,16 @@ public class FollowPlayer : MonoBehaviour
 
     void Start()
     {
+        current_speed = fast_speed;
+
         default_position = transform.position;
         default_rotation = transform.rotation;
     }
 
     public void RegisterNewBall(Transform new_ball)
     {
-        // Move more slowly to new ball
+        current_speed = slow_speed;
+
         player = new_ball;
     }
 
@@ -53,12 +58,17 @@ public class FollowPlayer : MonoBehaviour
         }
         else
         {
-            float new_y = transform.position.y * (1 - follow_speed) + player.position.y * follow_speed;
+            float new_y = transform.position.y * (1 - current_speed) + player.position.y * current_speed;
 
             float new_x = default_position.x;
             //new_x = transform.position.x * (1 - follow_speed) + player.position.x * follow_speed;
 
             transform.position = new Vector3(new_x, new_y, -10);
+
+            if (Vector2.Distance(player.transform.position, transform.position) < 0.1f)
+            {
+                current_speed = fast_speed;
+            }
         }
     }
 }
