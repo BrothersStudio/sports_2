@@ -8,9 +8,14 @@ public class Field : MonoBehaviour
     public Vector2 field_size;
     public GameObject ice_square;
 
-    public Brush brush;
+    private Brush brush;
 
     private void Awake()
+    {
+        brush = FindObjectOfType<Brush>();
+    }
+
+    private void Start()
     {
         List<GameObject> all_ice = new List<GameObject>();
         float x_distance = ice_square.GetComponent<Ice>().size / 100f;

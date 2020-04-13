@@ -21,7 +21,7 @@ public class Ice : MonoBehaviour
     private SlopeDirection slope;
     public float slope_force;
 
-    private void Awake()
+    private void Start()
     {
         transform.localScale = new Vector3(size, size, 1);
 

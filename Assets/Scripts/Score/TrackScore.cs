@@ -10,7 +10,7 @@ public class TrackScore : MonoBehaviour
 
     public float score_multiplier;
 
-    private void Awake()
+    private void Start()
     {
         goal_pos = GameObject.Find("Goal").transform.position;
         goal_pos.z = 0;
