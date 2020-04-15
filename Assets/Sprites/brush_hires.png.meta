@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 90aeb34ea2ea44f48b381ab02f4a30eb
+guid: e5c63b70a2fd3f64591e8589aa9e4dbb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4552838390712430263
-    second: brush_0
+      213: 162828535073091161
+    second: brush_hires_0
   - first:
-      213: 4612949534538396097
-    second: brush_1
+      213: 2057210080510780230
+    second: brush_hires_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: brush_0
+      name: brush_hires_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7beec26f46eee2f30800000000000000
-      internalID: 4552838390712430263
+      spriteID: 95e2450a0bb724200800000000000000
+      internalID: 162828535073091161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brush_1
+      name: brush_hires_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c1f6f4492d740040800000000000000
-      internalID: 4612949534538396097
+      spriteID: 643a23d2badac8c10800000000000000
+      internalID: 2057210080510780230
       vertices: []
       indices: 
       edges: []
