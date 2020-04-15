@@ -8,6 +8,8 @@ public class LevelLoader : MonoBehaviour
     public List<GameObject> levels;
     private GameObject current_level = null;
 
+    public FollowPlayer main_cam;
+
     private void Awake()
     {
         LoadNextLevel();
@@ -22,5 +24,7 @@ public class LevelLoader : MonoBehaviour
 
         current_level = Instantiate(levels[level_ind]);
         level_ind++;
+
+        main_cam.MoveToGoal(current_level.transform.Find("Goal").position);
     }
 }

@@ -24,11 +24,23 @@ public class FollowPlayer : MonoBehaviour
         default_rotation = transform.rotation;
     }
 
+    public void MoveToGoal(Vector2 goal_location)
+    {
+        Vector3 position = goal_location;
+        position.z = -10;
+        transform.position = position;
+    }
+
     public void RegisterNewBall(Transform new_ball)
     {
         current_speed = slow_speed;
 
         player = new_ball;
+    }
+
+    public void LaunchStart()
+    {
+        current_speed = fast_speed;
     }
 
     public void Shake(float amount)

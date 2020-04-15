@@ -11,6 +11,13 @@ public class Launch : MonoBehaviour
     private float launch_time;
     private float click_release_sanctuary = 0.5f;
 
+    private FollowPlayer main_camera;
+
+    private void Awake()
+    {
+        main_camera = Camera.main.GetComponent<FollowPlayer>();
+    }
+
     private void OnMouseDown()
     {
         if (!launched)
@@ -40,6 +47,8 @@ public class Launch : MonoBehaviour
         Cursor.visible = false;
         launching = true;
         launch_time = Time.timeSinceLevelLoad;
+
+        main_camera.LaunchStart();
     }
 
     private void StopLaunching()
