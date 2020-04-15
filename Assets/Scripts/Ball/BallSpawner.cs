@@ -10,11 +10,18 @@ public class BallSpawner : MonoBehaviour
     private List<GameObject> active_balls = new List<GameObject>();
     public GameObject ball_prefab;
 
-    public FollowPlayer main_camera;
-    public TrackScore score_tracker;
-    public Brush brush;
+    private FollowPlayer main_camera;
+    private TrackScore score_tracker;
+    private Brush brush;
 
     private void Awake()
+    {
+        main_camera = FindObjectOfType<FollowPlayer>();
+        score_tracker = FindObjectOfType<TrackScore>();
+        brush = FindObjectOfType<Brush>();
+    }
+
+    private void Start()
     {
         active_balls.Add(SpawnNewBall());
     }

@@ -16,7 +16,7 @@ public class FollowPlayer : MonoBehaviour
     Vector3 default_position;
     Quaternion default_rotation;
 
-    void Start()
+    void Awake()
     {
         current_speed = fast_speed;
 
