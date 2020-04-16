@@ -12,10 +12,12 @@ public class Brush : MonoBehaviour
     private bool left = false;
 
     public GameObject brush_particles;
+    private SpriteRenderer sprite;
 
     private void Awake()
     {
         main_camera = Camera.main;
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     public void RegisterNewBall(Transform new_ball)
@@ -45,6 +47,20 @@ public class Brush : MonoBehaviour
             left = false;
         }
         last_mouse_pos = current_mouse_pos;
+
+        if (brushing)
+        {
+            sprite.enabled = true;
+
+            Vector3 brush_pos = current_mouse_pos;
+            brush_pos.x -= 0.7f;  // offset brush
+            brush_pos.z = -9;
+            transform.position = brush_pos;
+        }
+        else
+        {
+            sprite.enabled = false;
+        }
     }
 
     public void SpawnBrushParticles()
