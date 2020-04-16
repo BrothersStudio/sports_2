@@ -47,7 +47,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.01
+  m_Radius: 0.5
 --- !u!114 &1629734146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,13 +174,13 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 3.1415927
+  m_Mass: 3.1415942
   m_LinearDrag: 0.6
   m_AngularDrag: 0.04
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 85405b39030ac554ba0251a21699868c, type: 2}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &1317151881
@@ -197,4 +197,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launched: 0
   launching: 0
-  launch_velocity: 10
+  launch_velocity: 5

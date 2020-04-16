@@ -35,7 +35,7 @@ public class Field : MonoBehaviour
         foreach (GameObject ice in all_ice)
         {
             ice.GetComponent<Ice>().CalculateNeighbors();
-            if (Random.value < 0.15f)
+            if (Random.value < 0.05f)
             {
                 ice.GetComponent<Ice>().Brush(true);
             }

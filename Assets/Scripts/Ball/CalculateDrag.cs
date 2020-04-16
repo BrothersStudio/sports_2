@@ -16,8 +16,11 @@ public class CalculateDrag : MonoBehaviour
         if (collision.tag == "Ice")
         {
             Ice current_ice = collision.GetComponent<Ice>();
-            rgb.drag = current_ice.GetFriction();
-            rgb.AddForce(current_ice.GetForce());
+            if (current_ice.brushed)
+            {
+                Vector2 force = (current_ice.transform.position - transform.position).normalized * current_ice.brush_force;
+                rgb.AddForce(force);
+            }
         }
     }
 }
