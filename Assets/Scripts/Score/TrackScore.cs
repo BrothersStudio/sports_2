@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TrackScore : MonoBehaviour
 {
+    float total_score;
+
     private Vector3 goal_pos;
     private List<Transform> active_balls = new List<Transform>();
 
@@ -26,7 +28,7 @@ public class TrackScore : MonoBehaviour
         CalculateScore();
     }
 
-    void CalculateScore()
+    public string CalculateScore()
     {
         float total_score = 0;
         foreach (Transform ball in active_balls)
@@ -37,6 +39,9 @@ public class TrackScore : MonoBehaviour
             total_score += Mathf.Clamp(score_multiplier - (distance / 39f) * score_multiplier, 0, score_multiplier);
         }
 
-        GetComponent<Text>().text = total_score.ToString("0.");
+        string score_string = total_score.ToString("0.");
+        GetComponent<Text>().text = score_string;
+
+        return score_string;
     }
 }

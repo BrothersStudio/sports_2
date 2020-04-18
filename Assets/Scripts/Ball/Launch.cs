@@ -54,8 +54,6 @@ public class Launch : MonoBehaviour
     private void StopLaunching()
     {
         launched = true;
-
-        Cursor.visible = true;
         launching = false;
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, launch_velocity);

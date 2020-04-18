@@ -13,12 +13,14 @@ public class BallSpawner : MonoBehaviour
     private FollowPlayer main_camera;
     private TrackScore score_tracker;
     private Brush brush;
+    private Scorecard scorecard;
 
     private void Awake()
     {
         main_camera = FindObjectOfType<FollowPlayer>();
         score_tracker = FindObjectOfType<TrackScore>();
         brush = FindObjectOfType<Brush>();
+        scorecard = GameObject.Find("Canvas").transform.Find("Scorecard").GetComponent<Scorecard>();
     }
 
     private void Start()
@@ -44,33 +46,35 @@ public class BallSpawner : MonoBehaviour
     {
         if (AllBallsDoneMoving())
         {
-            active_balls.Add(SpawnNewBall());
+            Cursor.visible = true;
+            if (active_balls.Count < 3)
+            {
+                active_balls.Add(SpawnNewBall());
+            }
+            else
+            {
+                scorecard.gameObject.SetActive(true);
+            }
         }
     }
 
     private bool AllBallsDoneMoving()
     {
-        if (ball_count != 3)
+        // Are any balls still moving
+        foreach (GameObject ball in active_balls)
         {
-            // Are any balls still moving
-            foreach (GameObject ball in active_balls)
+            if (!(ball.GetComponent<Launch>().launched &&
+                ball.GetComponent<Rigidbody2D>().velocity.magnitude < 0.1f))
             {
-                if (!(ball.GetComponent<Launch>().launched &&
-                    ball.GetComponent<Rigidbody2D>().velocity.magnitude < 0.1f))
-                {
-                    return false;
-                }
+                return false;
             }
-
-            // Set all velocities to zero
-            foreach (GameObject ball in active_balls)
-            {
-                ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            }
-
-            return true;
         }
 
-        return false;
+        // Set all lingering velocities to zero
+        foreach (GameObject ball in active_balls)
+        {
+            ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
+        return true;
     }
 }

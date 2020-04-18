@@ -4,24 +4,30 @@ using UnityEngine;
 
 public class LevelLoader : MonoBehaviour
 {
-    private int level_ind = 0;
+    public int debug_starting_level;
+
+    private int level_ind;
     public List<GameObject> levels;
     private GameObject current_level = null;
 
     public FollowPlayer main_cam;
     public LevelNameDisplay level_name_display;
+    public Scorecard scorecard;
 
     private void Awake()
     {
+        level_ind = debug_starting_level - 1;
         LoadNextLevel();
     }
 
-    private void LoadNextLevel()
+    public void LoadNextLevel()
     {
         if (current_level != null)
         {
             Destroy(current_level);
         }
+
+        scorecard.gameObject.SetActive(false);
 
         current_level = Instantiate(levels[level_ind]);
         level_ind++;
