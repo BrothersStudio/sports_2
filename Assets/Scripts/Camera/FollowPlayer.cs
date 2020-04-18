@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    float current_speed;
-    float slow_speed = 0.05f;
-    float fast_speed = 0.9f;
-    public Transform player;
+    private float current_speed;
+    private float slow_speed = 0.05f;
+    private float fast_speed = 0.9f;
+    private Transform player;
 
-    float trauma = 0;
-    float max_angle = 0.01f;
-    float max_offset = 0.5f;
+    private float trauma = 0;
+    private float max_angle = 0.01f;
+    private float max_offset = 0.5f;
 
-    Vector3 default_position;
-    Quaternion default_rotation;
+    private Vector3 default_position;
+    private Quaternion default_rotation;
+
+    public LevelNameDisplay level_name_display;
 
     void Awake()
     {
@@ -41,6 +43,7 @@ public class FollowPlayer : MonoBehaviour
     public void LaunchStart()
     {
         current_speed = fast_speed;
+        level_name_display.TurnOff();
     }
 
     public void Shake(float amount)
@@ -79,7 +82,7 @@ public class FollowPlayer : MonoBehaviour
 
             if (Vector2.Distance(player.transform.position, transform.position) < 0.1f)
             {
-                current_speed = fast_speed;
+                LaunchStart();
             }
         }
     }
