@@ -12,6 +12,8 @@ public class LevelLoader : MonoBehaviour
 
     public FollowPlayer main_cam;
     public LevelNameDisplay level_name_display;
+
+    public TrackScore score;
     public Scorecard scorecard;
 
     private void Awake()
@@ -34,5 +36,7 @@ public class LevelLoader : MonoBehaviour
 
         main_cam.MoveToGoal(current_level.transform.Find("Goal").position);
         level_name_display.TurnOn(current_level.GetComponent<Level>().level_name);
+
+        score.RecordGoalPosition();
     }
 }

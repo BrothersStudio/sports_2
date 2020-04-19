@@ -2156,6 +2156,8 @@ MonoBehaviour:
   debug_starting_level: 1
   levels:
   - {fileID: 5979473603662237548, guid: 490b3d083411934478a5e4231cd679ba, type: 3}
+  - {fileID: 5979473603662237548, guid: 292e981f6e98a1644a5b290af87081c9, type: 3}
   main_cam: {fileID: 340207990}
   level_name_display: {fileID: 529737458}
+  score: {fileID: 985645957}
   scorecard: {fileID: 85962343}

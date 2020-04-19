@@ -7,20 +7,25 @@ public class TrackScore : MonoBehaviour
 {
     float total_score;
 
+    private float initial_ball_dist;
     private Vector3 goal_pos;
     private List<Transform> active_balls = new List<Transform>();
 
     public float score_multiplier;
 
-    private void Start()
+    public void RecordGoalPosition()
     {
-        goal_pos = GameObject.Find("Goal").transform.position;
+        goal_pos = FindObjectOfType<Goal>().transform.position;
         goal_pos.z = 0;
     }
 
     public void RegisterNewBall(Transform new_ball)
     {
         active_balls.Add(new_ball);
+
+        Vector3 ball_pos = new_ball.position;
+        ball_pos.z = 0;
+        initial_ball_dist = Vector3.Distance(ball_pos, goal_pos);
     }
 
     private void Update()
@@ -36,7 +41,7 @@ public class TrackScore : MonoBehaviour
             Vector3 ball_pos = ball.position;
             ball_pos.z = 0;
             float distance = Vector3.Distance(goal_pos, ball_pos);
-            total_score += Mathf.Clamp(score_multiplier - (distance / 39f) * score_multiplier, 0, score_multiplier);
+            total_score += Mathf.Clamp(score_multiplier - (distance / initial_ball_dist) * score_multiplier, 0, score_multiplier);
         }
 
         string score_string = total_score.ToString("0.");
