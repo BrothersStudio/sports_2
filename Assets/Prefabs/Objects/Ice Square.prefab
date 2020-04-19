@@ -182,7 +182,7 @@ MonoBehaviour:
   starting_friction: 0.6
   brushed_friction: 0.2
   brushed: 0
-  brush_force: 80
+  brush_force: 40
   brushed_mask: {fileID: 9196330971023016101}
   neighbors: []
   slope_force: 50
