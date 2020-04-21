@@ -18,9 +18,6 @@ public class Ice : MonoBehaviour
     public List<Ice> neighbors = new List<Ice>();
     private List<Vector3> neighbor_vectors = new List<Vector3>();
 
-    private SlopeDirection slope;
-    public float slope_force;
-
     private void Start()
     {
         transform.localScale = new Vector3(size, size, 1);
@@ -103,63 +100,4 @@ public class Ice : MonoBehaviour
         }
         return count;
     }
-
-    public float GetFriction()
-    {
-        return current_friction;
-    }
-
-    public Vector2 GetForce()
-    {
-        Vector3 neighbor_force = Vector2.zero;
-
-        for (int i = 0; i < neighbors.Count; i++)
-        {
-            if (neighbors[i] != null)
-            {
-                if (neighbors[i].GetFriction() < GetFriction())
-                {
-                    neighbor_force += neighbor_vectors[i];
-                }
-            }
-        }
-
-        return neighbor_force * brush_force + GetSlopeDirection() * slope_force; 
-    }
-
-    public void SetSlopeDirection(SlopeDirection slope)
-    {
-        this.slope = slope;
-
-        if (slope != SlopeDirection.None)
-        {
-            transform.GetChild(0).gameObject.SetActive(true);
-        }
-    }
-
-    private Vector3 GetSlopeDirection()
-    {
-        switch (slope)
-        {
-            case SlopeDirection.North:
-                return Vector3.up;
-            case SlopeDirection.East:
-                return Vector3.right;
-            case SlopeDirection.South:
-                return Vector3.down;
-            case SlopeDirection.West:
-                return Vector3.left;
-            default:  // No slope
-                return Vector3.zero;
-        }
-    }
-}
-
-public enum SlopeDirection
-{
-    None,
-    North,
-    East,
-    South,
-    West
 }

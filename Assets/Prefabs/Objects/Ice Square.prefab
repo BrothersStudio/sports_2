@@ -178,14 +178,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f79f102ad590af49b6d4328e938416c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 20
+  size: 30
   starting_friction: 0.6
   brushed_friction: 0.2
   brushed: 0
   brush_force: 40
   brushed_mask: {fileID: 9196330971023016101}
   neighbors: []
-  slope_force: 50
 --- !u!61 &5162816323783234490
 BoxCollider2D:
   m_ObjectHideFlags: 0
