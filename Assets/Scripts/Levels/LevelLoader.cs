@@ -14,7 +14,7 @@ public class LevelLoader : MonoBehaviour
     public LevelNameDisplay level_name_display;
 
     public TrackScore score;
-    public Scorecard scorecard;
+    public TextSystem text_system;
 
     private void Awake()
     {
@@ -26,15 +26,16 @@ public class LevelLoader : MonoBehaviour
     {
         if (current_level != null)
         {
+            current_level.GetComponentInChildren<BallSpawner>().CleanupBalls();
             Destroy(current_level);
         }
 
-        scorecard.gameObject.SetActive(false);
+        text_system.Deactivate();
 
         current_level = Instantiate(levels[level_ind]);
         level_ind++;
 
-        main_cam.MoveToGoal(current_level.transform.Find("Goal").position);
+        main_cam.MoveToGoal(current_level.GetComponentInChildren<Goal>().transform.position);
         level_name_display.TurnOn(current_level.GetComponent<Level>().level_name);
 
         score.RecordGoalPosition();

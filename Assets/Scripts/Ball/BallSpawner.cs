@@ -6,6 +6,7 @@ public class BallSpawner : MonoBehaviour
 {
     public Vector2 spawn_location;
 
+    private bool done_level = false;
     private int ball_count = 0;
     private List<GameObject> active_balls = new List<GameObject>();
     public GameObject ball_prefab;
@@ -13,14 +14,14 @@ public class BallSpawner : MonoBehaviour
     private FollowPlayer main_camera;
     private TrackScore score_tracker;
     private Brush brush;
-    private Scorecard scorecard;
+    private TextSystem text_system;
 
     private void Awake()
     {
         main_camera = FindObjectOfType<FollowPlayer>();
         score_tracker = FindObjectOfType<TrackScore>();
         brush = FindObjectOfType<Brush>();
-        scorecard = GameObject.Find("Canvas").transform.Find("Scorecard").GetComponent<Scorecard>();
+        text_system = FindObjectOfType<TextSystem>();
     }
 
     private void Start()
@@ -31,6 +32,7 @@ public class BallSpawner : MonoBehaviour
     private GameObject SpawnNewBall()
     {
         ball_count++;
+        done_level = false;
 
         Vector3 total_spawn_location = new Vector3(spawn_location.x, spawn_location.y, ball_prefab.transform.position.z);
         GameObject new_ball = Instantiate(ball_prefab, total_spawn_location, Quaternion.identity);
@@ -46,14 +48,17 @@ public class BallSpawner : MonoBehaviour
     {
         if (AllBallsDoneMoving())
         {
-            Cursor.visible = true;
             if (active_balls.Count < 3)
             {
+                Cursor.visible = true;
                 active_balls.Add(SpawnNewBall());
             }
-            else
+            else if (!done_level)
             {
-                scorecard.gameObject.SetActive(true);
+                done_level = true;
+                Cursor.visible = true;
+
+                text_system.Activate();
             }
         }
     }
@@ -76,5 +81,14 @@ public class BallSpawner : MonoBehaviour
             ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
         return true;
+    }
+
+    public void CleanupBalls()
+    {
+        foreach (GameObject ball in active_balls)
+        {
+            Destroy(ball);
+        }
+        active_balls.Clear();
     }
 }
