@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7c3059a693bda847beb2fdd70950b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level_name: The Olympics
+  level_name: London Winter Olympics, 2010
 --- !u!1001 &613389004480242693
 PrefabInstance:
   m_ObjectHideFlags: 0
