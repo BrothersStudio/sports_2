@@ -180,6 +180,7 @@ MonoBehaviour:
   - Now let's kill some terrorist clowns.
   text_box: {fileID: 839979946}
   level_loader: {fileID: 2128102998}
+  score: {fileID: 0}
 --- !u!1 &340207986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,6 +1423,13 @@ MonoBehaviour:
   levels:
   - {fileID: 5979473603662237548, guid: 490b3d083411934478a5e4231cd679ba, type: 3}
   - {fileID: 5979473603662237548, guid: 292e981f6e98a1644a5b290af87081c9, type: 3}
+  - {fileID: 5979473603662237548, guid: da208d61b34be7a418ab608a666e67c2, type: 3}
+  - {fileID: 5979473603662237548, guid: b6c29a8d625d3784498fa1f3a2d7fd7d, type: 3}
+  - {fileID: 5979473603662237548, guid: 2d73e78fdb7bcff4b9d39fe233437f51, type: 3}
+  - {fileID: 5979473603662237548, guid: 23d092612eeaf1e4d8cc0da687f3392c, type: 3}
+  - {fileID: 5979473603662237548, guid: 303300a41268b8643b3e5adc7cbfb99c, type: 3}
+  - {fileID: 5979473603662237548, guid: 4853a6a06e551c249942cffbb9c902a1, type: 3}
+  - {fileID: 5979473603662237548, guid: d39be93a9dcdb4a49ad5558d5c1465b0, type: 3}
   main_cam: {fileID: 340207990}
   level_name_display: {fileID: 529737458}
   score: {fileID: 985645957}

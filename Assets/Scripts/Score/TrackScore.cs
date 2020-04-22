@@ -17,6 +17,8 @@ public class TrackScore : MonoBehaviour
     {
         goal_pos = FindObjectOfType<Goal>().transform.position;
         goal_pos.z = 0;
+
+        active_balls.Clear();
     }
 
     public void RegisterNewBall(Transform new_ball)
