@@ -180,7 +180,7 @@ MonoBehaviour:
   - Now let's kill some terrorist clowns.
   text_box: {fileID: 839979946}
   level_loader: {fileID: 2128102998}
-  score: {fileID: 0}
+  score: {fileID: 985645953}
 --- !u!1 &340207986
 GameObject:
   m_ObjectHideFlags: 0
