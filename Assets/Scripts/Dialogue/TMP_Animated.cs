@@ -14,6 +14,8 @@ namespace TMPro
     public class TMP_Animated : TextMeshProUGUI
     {
         private float speed = 20;
+        string[] subTexts;
+
         public TextRevealEvent onTextReveal;
         public DialogueEvent onDialogueFinish;
 
@@ -22,7 +24,7 @@ namespace TMPro
             text = string.Empty;
             // split the whole text into parts based off the <> tags 
             // even numbers in the array are text, odd numbers are tags
-            string[] subTexts = newText.Split('<', '>');
+            subTexts = newText.Split('<', '>');
 
             // textmeshpro still needs to parse its built-in tags, so we only include noncustom tags
             string displayText = "";
@@ -87,6 +89,13 @@ namespace TMPro
                 }
                 onDialogueFinish.Invoke();
             }
+        }
+
+        public void SkipText()
+        {
+            StopAllCoroutines();
+            maxVisibleCharacters = subTexts[0].Length;
+            onDialogueFinish.Invoke();
         }
     }
 }

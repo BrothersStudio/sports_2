@@ -25,7 +25,7 @@ public class Brush : MonoBehaviour
         active_ball = new_ball.GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (active_ball.velocity.magnitude > 0.1f &&
             !active_ball.GetComponent<Launch>().launching)

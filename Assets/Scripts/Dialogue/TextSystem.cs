@@ -39,11 +39,18 @@ public class TextSystem : MonoBehaviour
 
     private void Update()
     {
-        if (done_current_text && text_box.gameObject.activeSelf)
+        if (done_current_text && text_box.transform.parent.gameObject.activeSelf)
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 DisplayNextText();
+            }
+        }
+        else if (!done_current_text && text_box.transform.parent.gameObject.activeSelf)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                text_box.SkipText();
             }
         }
     }
