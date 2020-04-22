@@ -43,11 +43,14 @@ public class FollowPlayer : MonoBehaviour
     {
         yield return new WaitForSeconds(slow_pause_time);
 
-        level_name_display.TurnOff();
-
         float t = 0;
         while (t < 1)
         {
+            if (t > 0.10f)
+            {
+                level_name_display.TurnOff();
+            }
+
             t += Time.deltaTime / move_time;
             Vector3 pos = Vector2.Lerp(transform.position, player.transform.position, SmoothStep(t));
             pos.z = -10;
