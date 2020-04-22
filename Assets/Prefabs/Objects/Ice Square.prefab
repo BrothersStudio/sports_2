@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 30
-  starting_friction: 0.6
+  starting_friction: 0.7
   brushed_friction: 0.2
   brushed: 0
   brush_force: 40

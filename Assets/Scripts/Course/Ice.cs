@@ -118,4 +118,9 @@ public class Ice : MonoBehaviour
 
         return count;
     }
+
+    public float GetDrag()
+    {
+        return current_friction;
+    }
 }
