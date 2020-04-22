@@ -39,7 +39,7 @@ public class TextSystem : MonoBehaviour
 
     private void Update()
     {
-        if (done_current_text)
+        if (done_current_text && text_box.gameObject.activeSelf)
         {
             if (Input.GetMouseButton(0))
             {
@@ -51,7 +51,7 @@ public class TextSystem : MonoBehaviour
     public void DisplayNextText()
     {
         ind_displaying++;
-        if (script.Count == ind_displaying)
+        if (script.Count <= ind_displaying)
         {
             // Done with script, next level
             Deactivate();
