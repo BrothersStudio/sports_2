@@ -35,7 +35,12 @@ public class LevelLoader : MonoBehaviour
         current_level = Instantiate(levels[level_ind]);
         level_ind++;
 
-        main_cam.MoveToGoal(current_level.GetComponentInChildren<Goal>().transform.position);
+        // Intro cinematic moves camera on level 1
+        if (level_ind != 1 || !FindObjectOfType<IntroCinematic>().show_intro)
+        {
+            main_cam.MoveToGoal(current_level.GetComponentInChildren<Goal>().transform.position);
+        }
+
         level_name_display.TurnOn(current_level.GetComponent<Level>().level_name);
 
         score.RecordGoalPosition();

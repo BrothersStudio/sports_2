@@ -39,6 +39,11 @@ public class FollowPlayer : MonoBehaviour
         StartCoroutine(LevelOverviewAnimation());
     }
 
+    public void StartAnimationFromIntro()
+    {
+        StartCoroutine(LevelOverviewAnimation());
+    }
+
     private IEnumerator LevelOverviewAnimation()
     {
         yield return new WaitForSeconds(slow_pause_time);
