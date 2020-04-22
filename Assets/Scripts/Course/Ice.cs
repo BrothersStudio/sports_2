@@ -9,11 +9,12 @@ public class Ice : MonoBehaviour
     public float starting_friction;
     public float brushed_friction;
     private float current_friction;
-
+    
     public bool brushed = false;
     private Brush brush;
     public float brush_force;
     public SpriteRenderer brushed_mask;
+    private float unbrush_time = 10;
 
     public List<Ice> neighbors = new List<Ice>();
     private List<Vector3> neighbor_vectors = new List<Vector3>();
@@ -72,22 +73,33 @@ public class Ice : MonoBehaviour
 
     public void Brush(bool init = false)
     {
-        Color brushed_mask_color = brushed_mask.color;
-        brushed_mask_color.a = GetBrushedNeighbors() / 9f;
-        brushed_mask.color = brushed_mask_color;
+        brushed = true;
+        current_friction = brushed_friction;
 
         if (!init)
         {
             brush.SpawnBrushParticles();
+            Invoke("Unbrush", unbrush_time);
         }
 
-        brushed = true;
-        current_friction = brushed_friction;
+        Color brushed_mask_color = brushed_mask.color;
+        brushed_mask_color.a = GetBrushedNeighbors() / 9f;
+        brushed_mask.color = brushed_mask_color;
+    }
+
+    private void Unbrush()
+    {
+        brushed = false;
+        current_friction = starting_friction;
+
+        Color brushed_mask_color = brushed_mask.color;
+        brushed_mask_color.a = GetBrushedNeighbors() / 9f;
+        brushed_mask.color = brushed_mask_color;
     }
 
     private int GetBrushedNeighbors()
     {
-        int count = 1;
+        int count = 0;
         foreach (Ice ice in neighbors)
         {
             if (ice != null)
@@ -98,6 +110,12 @@ public class Ice : MonoBehaviour
                 }
             }
         }
+
+        if (brushed)
+        {
+            count++;
+        }
+
         return count;
     }
 }
