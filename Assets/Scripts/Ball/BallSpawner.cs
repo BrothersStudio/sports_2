@@ -35,7 +35,7 @@ public class BallSpawner : MonoBehaviour
         done_level = false;
 
         Vector3 total_spawn_location = new Vector3(spawn_location.x, spawn_location.y, ball_prefab.transform.position.z);
-        GameObject new_ball = Instantiate(ball_prefab, total_spawn_location, Quaternion.identity);
+        GameObject new_ball = Instantiate(ball_prefab, total_spawn_location, ball_prefab.transform.rotation);
 
         main_camera.RegisterNewBall(new_ball.transform);
         score_tracker.RegisterNewBall(new_ball.transform);
