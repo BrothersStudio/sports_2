@@ -9,6 +9,8 @@ public class FollowPlayer : MonoBehaviour
     private float fast_speed = 0.9f;
     private float slow_pause_time = 1f;
     private float move_time = 2f;
+
+    private bool launched = false;
     private bool camera_move = false;
     private Transform player;
 
@@ -20,6 +22,8 @@ public class FollowPlayer : MonoBehaviour
     private Quaternion default_rotation;
 
     public LevelNameDisplay level_name_display;
+    private List<int> x_move_allowed_levels = new List<int>();
+    private bool can_x_move = false;
 
     void Awake()
     {
@@ -27,6 +31,21 @@ public class FollowPlayer : MonoBehaviour
 
         default_position = transform.position;
         default_rotation = transform.rotation;
+        
+        x_move_allowed_levels.Add(2);
+        x_move_allowed_levels.Add(3);
+    }
+
+    public void SetCurrentLevel(int level)
+    {
+        if (x_move_allowed_levels.Contains(level))
+        {
+            can_x_move = true;
+        }
+        else
+        {
+            can_x_move = false;
+        }
     }
 
     public void MoveToGoal(Vector2 goal_location)
@@ -62,7 +81,6 @@ public class FollowPlayer : MonoBehaviour
             transform.position = pos;
             yield return null;
         }
-        LaunchStart();
     }
 
     private float SmoothStep(float t)
@@ -75,6 +93,8 @@ public class FollowPlayer : MonoBehaviour
         current_speed = slow_speed;
 
         player = new_ball;
+
+        launched = false;
     }
 
     public void LaunchStart()
@@ -84,6 +104,11 @@ public class FollowPlayer : MonoBehaviour
 
         camera_move = true;
         StopAllCoroutines();
+    }
+
+    public void LaunchEnd()
+    {
+        launched = true;
     }
 
     public void Shake(float amount)
@@ -117,12 +142,18 @@ public class FollowPlayer : MonoBehaviour
             {
                 float new_y = transform.position.y * (1 - current_speed) + player.position.y * current_speed;
 
-                float new_x = default_position.x;
-                //new_x = transform.position.x * (1 - follow_speed) + player.position.x * follow_speed;
+                float new_x;
+                if (!can_x_move || !launched)
+                {
+                    new_x = default_position.x;
+                }
+                else 
+                {
+                    new_x = transform.position.x * (1 - current_speed) + player.position.x * current_speed;
+                }
 
                 transform.position = new Vector3(new_x, new_y, -10);
             }
-
         }
     }
 }

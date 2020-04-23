@@ -42,6 +42,7 @@ public class LevelLoader : MonoBehaviour
         }
 
         level_name_display.TurnOn(current_level.GetComponent<Level>().level_name);
+        main_cam.SetCurrentLevel(level_ind);
 
         score.RecordGoalPosition();
     }

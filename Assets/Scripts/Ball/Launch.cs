@@ -62,7 +62,7 @@ public class Launch : MonoBehaviour
         float t = 0;
         while (current_velocity < launch_velocity)
         {
-            current_velocity = Mathf.SmoothStep(launch_velocity / 4f, launch_velocity, t);
+            current_velocity = Mathf.SmoothStep(launch_velocity / 2f, launch_velocity, t);
             t += Time.deltaTime / smooth_launch_time;
             yield return null;
         }
@@ -73,6 +73,7 @@ public class Launch : MonoBehaviour
         launched = true;
         launching = false;
 
+        main_camera.LaunchEnd();
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, current_velocity);
     }
 
