@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ice
   - Lines
+  - Wall
   layers:
   - Default
   - TransparentFX
