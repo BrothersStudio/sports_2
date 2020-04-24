@@ -7,6 +7,7 @@ public class FollowPlayer : MonoBehaviour
     private float current_speed;
     private float slow_speed = 0.02f;
     private float fast_speed = 0.9f;
+    private float x_speed = 0.05f;
     private float slow_pause_time = 1f;
     private float move_time = 2f;
 
@@ -149,7 +150,7 @@ public class FollowPlayer : MonoBehaviour
                 }
                 else 
                 {
-                    new_x = transform.position.x * (1 - current_speed) + player.position.x * current_speed;
+                    new_x = transform.position.x * (1 - x_speed) + player.position.x * x_speed;
                 }
 
                 transform.position = new Vector3(new_x, new_y, -10);
