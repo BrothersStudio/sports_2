@@ -6,10 +6,13 @@ public class BallSpawner : MonoBehaviour
 {
     public Vector2 spawn_location;
 
+    private int current_level = 0;
     private bool done_level = false;
     private int ball_count = 0;
     private List<GameObject> active_balls = new List<GameObject>();
     public GameObject ball_prefab;
+
+    public AudioClip clapping_clip;
 
     private FollowPlayer main_camera;
     private TrackScore score_tracker;
@@ -29,6 +32,11 @@ public class BallSpawner : MonoBehaviour
         active_balls.Add(SpawnNewBall());
     }
 
+    public void SetCurrentLevel(int current_level)
+    {
+        this.current_level = current_level;    
+    }
+
     private GameObject SpawnNewBall()
     {
         ball_count++;
@@ -36,6 +44,7 @@ public class BallSpawner : MonoBehaviour
 
         Vector3 total_spawn_location = new Vector3(spawn_location.x, spawn_location.y, ball_prefab.transform.position.z);
         GameObject new_ball = Instantiate(ball_prefab, total_spawn_location, ball_prefab.transform.rotation);
+        new_ball.GetComponent<Ball>().SetLevel(current_level);
 
         main_camera.RegisterNewBall(new_ball.transform);
         score_tracker.RegisterNewBall(new_ball.transform);
@@ -51,12 +60,15 @@ public class BallSpawner : MonoBehaviour
             if (active_balls.Count < 3)
             {
                 Cursor.visible = true;
+                PlayClapping();
+
                 active_balls.Add(SpawnNewBall());
             }
             else if (!done_level)
             {
                 done_level = true;
                 Cursor.visible = true;
+                PlayClapping();
 
                 text_system.Activate();
             }
@@ -81,6 +93,16 @@ public class BallSpawner : MonoBehaviour
             ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
         return true;
+    }
+
+    public void PlayClapping()
+    {
+        if (current_level == 1)
+        {
+            main_camera.GetComponent<AudioSource>().clip = clapping_clip;
+            main_camera.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+            main_camera.GetComponent<AudioSource>().Play();
+        }
     }
 
     public void CleanupBalls()

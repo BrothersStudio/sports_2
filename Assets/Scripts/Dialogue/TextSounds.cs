@@ -20,6 +20,7 @@ public class TextSounds : MonoBehaviour
         if (char.IsLetter(c) && !voiceSource.isPlaying)
         {
             voiceSource.Stop();
+            voiceSource.loop = false;
             voiceSource.clip = voices[Random.Range(0, voices.Length)];
             voiceSource.Play();
         }

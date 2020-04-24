@@ -33,12 +33,6 @@ public class Launch : MonoBehaviour
     {
         if (launching)
         {
-            if (!Input.GetMouseButton(0) && Time.timeSinceLevelLoad > launch_time + click_release_sanctuary)
-            {
-                StopLaunching();
-                return;
-            }
-
             float x_pos = Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, -4.5f, 4.5f);
             Vector3 new_pos = new Vector3(x_pos, transform.position.y + Time.deltaTime * current_velocity, transform.position.z);
             GetComponent<Rigidbody2D>().MovePosition(new_pos);
@@ -79,7 +73,7 @@ public class Launch : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Launch Line")
+        if (collision.tag == "Lines")
         {
             StopLaunching();
         }

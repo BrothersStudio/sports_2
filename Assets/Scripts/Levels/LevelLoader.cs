@@ -41,8 +41,10 @@ public class LevelLoader : MonoBehaviour
             main_cam.MoveToGoal(current_level.GetComponentInChildren<Goal>().transform.position);
         }
 
+        current_level.GetComponentInChildren<BallSpawner>().SetCurrentLevel(level_ind);
         level_name_display.TurnOn(current_level.GetComponent<Level>().level_name);
         main_cam.SetCurrentLevel(level_ind);
+        FindObjectOfType<Ambience>().SetAmbientSound(level_ind);
 
         score.RecordGoalPosition();
     }

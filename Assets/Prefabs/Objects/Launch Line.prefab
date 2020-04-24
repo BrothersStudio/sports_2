@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 684968751230123931}
   m_Layer: 0
   m_Name: Launch Line
-  m_TagString: Launch Line
+  m_TagString: Lines
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
