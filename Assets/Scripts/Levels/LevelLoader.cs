@@ -44,7 +44,10 @@ public class LevelLoader : MonoBehaviour
         current_level.GetComponentInChildren<BallSpawner>().SetCurrentLevel(level_ind);
         level_name_display.TurnOn(current_level.GetComponent<Level>().level_name);
         main_cam.SetCurrentLevel(level_ind);
+
+        // Audio
         FindObjectOfType<Ambience>().SetAmbientSound(level_ind);
+        FindObjectOfType<Music>().SetMusic(level_ind);
 
         score.RecordGoalPosition();
     }
