@@ -28,13 +28,21 @@ public class CalculateDrag : MonoBehaviour
             if (current_ice.brushed)
             {
                 Vector2 force = (current_ice.transform.position - transform.position).normalized * current_ice.brush_force;
+
                 rgb.AddForce(force);
+                if (force.x > 0)
+                {
+                    rgb.AddTorque(-1.5f);
+                }
+                else
+                {
+                    rgb.AddTorque(1.5f);
+                }
             }
         }
     }
 
-    private void
-        UpdateDrag(float ice_drag)
+    private void UpdateDrag(float ice_drag)
     {
         last_seen_drags.RemoveAt(0);
         last_seen_drags.Add(ice_drag);
