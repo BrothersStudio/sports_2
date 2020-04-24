@@ -81,14 +81,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 57.090034, y: -34.932453}
+    - - {x: 26.413696, y: -23.893993}
       - {x: -0.1974597, y: -14.067346}
       - {x: -12.0983515, y: -18.451712}
       - {x: -5.397358, y: -35.805317}
       - {x: 1.339201, y: -54.58115}
       - {x: 12.571381, y: -50.526333}
       - {x: 6.102446, y: -31.851063}
-      - {x: 52.186935, y: -48.216724}
+      - {x: 21.577946, y: -36.909584}
 --- !u!1001 &82947772179948749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101,10 +101,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 333883295877213901, guid: 4e93895921f4e2442a9500b8ce523c28,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 31dbae2fa98eb8548abefdae074e98b1, type: 2}
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4054
+      value: 0.1546
       objectReference: {fileID: 0}
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
@@ -114,7 +119,7 @@ PrefabInstance:
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8
+      value: -8.1
       objectReference: {fileID: 0}
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
@@ -159,12 +164,27 @@ PrefabInstance:
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1281.0238
+      value: 1332.8104
       objectReference: {fileID: 0}
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
       propertyPath: m_LocalScale.y
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 333883295877213903, guid: 4e93895921f4e2442a9500b8ce523c28,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 333883295877213903, guid: 4e93895921f4e2442a9500b8ce523c28,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.92549026
+      objectReference: {fileID: 0}
+    - target: {fileID: 333883295877213903, guid: 4e93895921f4e2442a9500b8ce523c28,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.15294118
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e93895921f4e2442a9500b8ce523c28, type: 3}
@@ -264,12 +284,12 @@ PrefabInstance:
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.0715
+      value: 17.578
       objectReference: {fileID: 0}
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.8837
+      value: 5.599
       objectReference: {fileID: 0}
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
@@ -319,7 +339,7 @@ PrefabInstance:
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 6159.008
+      value: 2894.4875
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e93895921f4e2442a9500b8ce523c28, type: 3}
@@ -769,12 +789,12 @@ PrefabInstance:
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.67
+      value: 23.811
       objectReference: {fileID: 0}
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -29.908
+      value: -9.037
       objectReference: {fileID: 0}
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
@@ -824,7 +844,7 @@ PrefabInstance:
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1534.9823
+      value: 1538.0522
       objectReference: {fileID: 0}
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
@@ -854,12 +874,12 @@ PrefabInstance:
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.2
+      value: 12.785
       objectReference: {fileID: 0}
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.6
+      value: -9.183
       objectReference: {fileID: 0}
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
@@ -909,7 +929,7 @@ PrefabInstance:
     - target: {fileID: 333883295877213902, guid: 4e93895921f4e2442a9500b8ce523c28,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 5000
+      value: 1757.6299
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e93895921f4e2442a9500b8ce523c28, type: 3}
@@ -934,12 +954,12 @@ PrefabInstance:
     - target: {fileID: 5335372258607369711, guid: e9ad2477bb2c3f74682af07fc484c71b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.684086
+      value: 19.19
       objectReference: {fileID: 0}
     - target: {fileID: 5335372258607369711, guid: e9ad2477bb2c3f74682af07fc484c71b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -25.81223
+      value: -5.55
       objectReference: {fileID: 0}
     - target: {fileID: 5335372258607369711, guid: e9ad2477bb2c3f74682af07fc484c71b,
         type: 3}
