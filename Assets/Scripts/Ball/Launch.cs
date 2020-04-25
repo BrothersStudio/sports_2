@@ -15,10 +15,12 @@ public class Launch : MonoBehaviour
     private float click_release_sanctuary = 0.5f;
 
     private FollowPlayer main_camera;
+    private Brush brush;
 
     private void Awake()
     {
         main_camera = Camera.main.GetComponent<FollowPlayer>();
+        brush = FindObjectOfType<Brush>();
     }
 
     private void OnMouseDown()
@@ -68,6 +70,8 @@ public class Launch : MonoBehaviour
         launching = false;
 
         main_camera.LaunchEnd();
+        brush.Brushing(true);
+
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, current_velocity);
     }
 

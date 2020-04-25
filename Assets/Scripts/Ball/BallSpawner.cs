@@ -57,6 +57,8 @@ public class BallSpawner : MonoBehaviour
     {
         if (AllBallsDoneMoving())
         {
+            brush.Brushing(false);
+
             if (active_balls.Count < 3)
             {
                 Cursor.visible = true;
