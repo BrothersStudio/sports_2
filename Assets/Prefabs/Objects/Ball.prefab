@@ -229,7 +229,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.847
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -326,3 +326,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hit_wall_clip: {fileID: 8300000, guid: 7cf717d448fefdf45a48ac0d0e937499, type: 3}
+  ice_clips:
+  - {fileID: 8300000, guid: cb82d7bb8e75b2a479efc962e0a0a570, type: 3}
+  - {fileID: 8300000, guid: 105b215ad60811544bf1e41d39edb7c0, type: 3}
+  - {fileID: 8300000, guid: 3776b6f33768e924788fcbfe128eac83, type: 3}
+  - {fileID: 8300000, guid: 5199b72fd54e40041970e3d6871e0114, type: 3}
+  - {fileID: 8300000, guid: 119f1c220b2c0cd44b922d69eae36e53, type: 3}

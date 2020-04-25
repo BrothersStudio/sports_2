@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class CalculateDrag : MonoBehaviour
 {
-    Rigidbody2D rgb;
-    List<float> last_seen_drags = new List<float>();
-    int drag_history_length = 10;
+    new private Rigidbody2D rigidbody;
+    private List<float> last_seen_drags = new List<float>();
+    private int drag_history_length = 10;
 
     private void Awake()
     {
-        rgb = transform.parent.GetComponent<Rigidbody2D>();
+        rigidbody = transform.parent.GetComponent<Rigidbody2D>();
 
         for (int i = 0; i < drag_history_length; i++)
         {
-            last_seen_drags.Add(rgb.drag);
+            last_seen_drags.Add(rigidbody.drag);
         }
     }
 
@@ -29,14 +29,14 @@ public class CalculateDrag : MonoBehaviour
             {
                 Vector2 force = (current_ice.transform.position - transform.position).normalized * current_ice.brush_force;
 
-                rgb.AddForce(force);
+                rigidbody.AddForce(force);
                 if (force.x > 0)
                 {
-                    rgb.AddTorque(-1.5f);
+                    rigidbody.AddTorque(-1.5f);
                 }
                 else
                 {
-                    rgb.AddTorque(1.5f);
+                    rigidbody.AddTorque(1.5f);
                 }
             }
         }
@@ -52,6 +52,6 @@ public class CalculateDrag : MonoBehaviour
         {
             sum += drag;
         }
-        rgb.drag = sum / (float)drag_history_length;
+        rigidbody.drag = sum / (float)drag_history_length;
     }
 }
