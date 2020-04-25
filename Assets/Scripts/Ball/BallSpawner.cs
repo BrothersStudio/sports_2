@@ -17,14 +17,12 @@ public class BallSpawner : MonoBehaviour
     private FollowPlayer main_camera;
     private TrackScore score_tracker;
     private Brush brush;
-    private TextSystem text_system;
 
     private void Awake()
     {
         main_camera = FindObjectOfType<FollowPlayer>();
         score_tracker = FindObjectOfType<TrackScore>();
         brush = FindObjectOfType<Brush>();
-        text_system = FindObjectOfType<TextSystem>();
     }
 
     private void Start()
@@ -72,7 +70,7 @@ public class BallSpawner : MonoBehaviour
                 Cursor.visible = true;
                 PlayClapping();
 
-                text_system.Activate();
+                FindObjectOfType<LevelEndAnimation>().Play();
             }
         }
     }
