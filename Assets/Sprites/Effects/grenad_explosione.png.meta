@@ -1,0 +1,758 @@
+fileFormatVersion: 2
+guid: b02b4b4d95dbc8942b8cc0d1f5b6cc95
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9223229647338433130
+    second: grenad_explosione_0
+  - first:
+      213: 5927660369273478789
+    second: grenad_explosione_1
+  - first:
+      213: 5101708107742914685
+    second: grenad_explosione_2
+  - first:
+      213: -3775024581349523469
+    second: grenad_explosione_3
+  - first:
+      213: -6389836332975369875
+    second: grenad_explosione_4
+  - first:
+      213: -6713440619543769737
+    second: grenad_explosione_5
+  - first:
+      213: 6340847665622257898
+    second: grenad_explosione_6
+  - first:
+      213: 8905574495197458877
+    second: grenad_explosione_7
+  - first:
+      213: 2438373570174210451
+    second: grenad_explosione_8
+  - first:
+      213: -2245924963805548056
+    second: grenad_explosione_9
+  - first:
+      213: 3760102099774321857
+    second: grenad_explosione_10
+  - first:
+      213: -848160343446904369
+    second: grenad_explosione_11
+  - first:
+      213: 7541238559205835922
+    second: grenad_explosione_12
+  - first:
+      213: -100306156190712544
+    second: grenad_explosione_13
+  - first:
+      213: -536923331923178384
+    second: grenad_explosione_14
+  - first:
+      213: 6347922224822700146
+    second: grenad_explosione_15
+  - first:
+      213: 86714831377352366
+    second: grenad_explosione_16
+  - first:
+      213: -3025140241401363860
+    second: grenad_explosione_17
+  - first:
+      213: -9152095073183530211
+    second: grenad_explosione_18
+  - first:
+      213: -3232763002542438466
+    second: grenad_explosione_19
+  - first:
+      213: 4145010632231624667
+    second: grenad_explosione_20
+  - first:
+      213: 2559543262331796482
+    second: grenad_explosione_21
+  - first:
+      213: 4265673035536832168
+    second: grenad_explosione_22
+  - first:
+      213: -7192571782672196197
+    second: grenad_explosione_23
+  - first:
+      213: 7344055707437013814
+    second: grenad_explosione_24
+  - first:
+      213: -2625055775509265103
+    second: grenad_explosione_25
+  - first:
+      213: 5186072132025879958
+    second: grenad_explosione_26
+  - first:
+      213: -7087541137967930824
+    second: grenad_explosione_27
+  - first:
+      213: 2094563903772283404
+    second: grenad_explosione_28
+  - first:
+      213: -3193435372111444693
+    second: grenad_explosione_29
+  - first:
+      213: -1779546919789751241
+    second: grenad_explosione_30
+  - first:
+      213: 5078348510304166290
+    second: grenad_explosione_31
+  - first:
+      213: 964692621394420129
+    second: grenad_explosione_32
+  - first:
+      213: -8692115816912969417
+    second: grenad_explosione_33
+  - first:
+      213: 6660503209077469709
+    second: grenad_explosione_34
+  - first:
+      213: -1807373590774185827
+    second: grenad_explosione_35
+  - first:
+      213: 8355106683154235120
+    second: grenad_explosione_36
+  - first:
+      213: 2552129258673750564
+    second: grenad_explosione_37
+  - first:
+      213: 7252432915508851693
+    second: grenad_explosione_38
+  - first:
+      213: -9132531812454928790
+    second: grenad_explosione_39
+  - first:
+      213: -2994971788706665231
+    second: grenad_explosione_40
+  - first:
+      213: 5873865171846780052
+    second: grenad_explosione_41
+  - first:
+      213: 6995657478256474181
+    second: grenad_explosione_42
+  - first:
+      213: 2306487684413002095
+    second: grenad_explosione_43
+  - first:
+      213: -1322738046750219919
+    second: grenad_explosione_44
+  - first:
+      213: 5115081243353420571
+    second: grenad_explosione_45
+  - first:
+      213: 2394147605647640703
+    second: grenad_explosione_46
+  - first:
+      213: 5429551396048019653
+    second: grenad_explosione_47
+  - first:
+      213: 7733134998438340027
+    second: grenad_explosione_48
+  - first:
+      213: -7449061558468861232
+    second: grenad_explosione_49
+  - first:
+      213: -1533126590092579375
+    second: grenad_explosione_50
+  - first:
+      213: 1514725013712960770
+    second: grenad_explosione_51
+  - first:
+      213: 5343088303763298458
+    second: grenad_explosione_52
+  - first:
+      213: -8046960784211525974
+    second: grenad_explosione_53
+  - first:
+      213: 7400430295945761064
+    second: grenad_explosione_54
+  - first:
+      213: -6724356327572768083
+    second: grenad_explosione_55
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: grenad_explosione_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a657b5f7e7fff70800000000000000
+      internalID: 9223229647338433130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ed4b323b7434250800000000000000
+      internalID: 5927660369273478789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d782fb57e78ecc640800000000000000
+      internalID: 5101708107742914685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff3b4ae42b6c9bc0800000000000000
+      internalID: -3775024581349523469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d615e10c5bdb257a0800000000000000
+      internalID: -6389836332975369875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d4a6b635115d2a0800000000000000
+      internalID: -6713440619543769737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0974c4b573ff750800000000000000
+      internalID: 6340847665622257898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_7
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1f503d1d4f69b70800000000000000
+      internalID: 8905574495197458877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_8
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3915fefc7d7d6d120800000000000000
+      internalID: 2438373570174210451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_9
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e13034152fd4d0e0800000000000000
+      internalID: -2245924963805548056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_10
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4bf3810f09e2430800000000000000
+      internalID: 3760102099774321857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_11
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1264059aaba34f0800000000000000
+      internalID: -848160343446904369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_12
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29441ffa38cd7a860800000000000000
+      internalID: 7541238559205835922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_13
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02db7771514ab9ef0800000000000000
+      internalID: -100306156190712544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_14
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c891903177c88f0800000000000000
+      internalID: -536923331923178384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_15
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2784d5871a9581850800000000000000
+      internalID: 6347922224822700146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_16
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea641010ea2143100800000000000000
+      internalID: 86714831377352366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_17
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6248837afa8406d0800000000000000
+      internalID: -3025140241401363860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_18
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d130b44550a3df080800000000000000
+      internalID: -9152095073183530211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_19
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7ce665d2be223d0800000000000000
+      internalID: -3232763002542438466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_20
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf12647539068930800000000000000
+      internalID: 4145010632231624667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grenad_explosione_21
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20cf78a3903558320800000000000000
+      internalID: 2559543262331796482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
