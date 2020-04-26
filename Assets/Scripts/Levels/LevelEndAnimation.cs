@@ -34,7 +34,7 @@ public class LevelEndAnimation : MonoBehaviour
         {
             foreach (GameObject ball in FindObjectOfType<BallSpawner>().GetBalls())
             {
-                ball.GetComponent<Ball>().Detonate();
+                ball.GetComponent<Ball>().Detonate(true);
             }
         }
 
