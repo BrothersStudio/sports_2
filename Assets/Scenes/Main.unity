@@ -11393,7 +11393,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.756
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -11490,6 +11490,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzle_music: {fileID: 8300000, guid: ecf039ebb1161f646991368cbae7bf8c, type: 3}
+  dialogue_music: {fileID: 8300000, guid: 8bd2e25ca3fddce40922ecf57bd9d23f, type: 3}
+  fight_music: {fileID: 0}
 --- !u!1 &2000670596
 GameObject:
   m_ObjectHideFlags: 0
