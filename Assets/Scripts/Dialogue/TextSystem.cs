@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class TextSystem : MonoBehaviour
 {
-    [TextArea]
-    public List<string> script;
+    private int current_level;
+    public List<ScriptHolder> scripts;
 
     bool done_current_text = false;
     int ind_displaying = -1;
@@ -20,6 +20,13 @@ public class TextSystem : MonoBehaviour
         text_box.onDialogueFinish.AddListener(() => DoneCurrentText());
     }
 
+    public void SetNewLevel(int level_ind)
+    {
+        Deactivate();
+
+        current_level = level_ind;
+    }
+
     public void Activate()
     {
         foreach (Transform child in transform)
@@ -27,6 +34,9 @@ public class TextSystem : MonoBehaviour
             child.gameObject.SetActive(true);
         }
         score.SetActive(false);
+
+        FindObjectOfType<Music>().SetDialogueMusic();
+        FindObjectOfType<Ambience>().Stop();
 
         ind_displaying = -1;
         DisplayNextText();
@@ -58,7 +68,7 @@ public class TextSystem : MonoBehaviour
     public void DisplayNextText()
     {
         ind_displaying++;
-        if (script.Count <= ind_displaying)
+        if (scripts[current_level].script.Count <= ind_displaying)
         {
             // Done with script, next level
             Deactivate();
@@ -67,7 +77,7 @@ public class TextSystem : MonoBehaviour
         else
         {
             done_current_text = false;
-            text_box.ReadText(script[ind_displaying]);
+            text_box.ReadText(scripts[current_level].script[ind_displaying]);
         }
     }
 

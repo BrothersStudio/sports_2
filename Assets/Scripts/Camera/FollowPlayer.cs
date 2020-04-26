@@ -8,7 +8,9 @@ public class FollowPlayer : MonoBehaviour
     private float slow_speed = 0.05f;
     private float fast_speed = 0.8f;
     private float x_speed = 0.05f;
-    private float slow_pause_time = 1f;
+    private float current_pause_time;
+    private float quick_pause_time = 1f;
+    private float long_pause_time = 3f;
     private float move_time = 2f;
 
     private bool launched = false;
@@ -42,6 +44,7 @@ public class FollowPlayer : MonoBehaviour
 
     public void SetCurrentLevel(int level)
     {
+        // Can move in x direction?
         if (x_move_allowed_levels.Contains(level))
         {
             can_x_move = true;
@@ -49,6 +52,16 @@ public class FollowPlayer : MonoBehaviour
         else
         {
             can_x_move = false;
+        }
+
+        // How long to pause before moving to ball
+        if (level >= 7)
+        {
+            current_pause_time = long_pause_time;
+        }
+        else
+        {
+            current_pause_time = quick_pause_time;
         }
     }
 
@@ -76,7 +89,7 @@ public class FollowPlayer : MonoBehaviour
 
     private IEnumerator LevelOverviewAnimation()
     {
-        yield return new WaitForSeconds(slow_pause_time);
+        yield return new WaitForSeconds(current_pause_time);
 
         float t = 0;
         while (t < 1)

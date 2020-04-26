@@ -279,12 +279,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5307da0c019a11a4ebb0406fa29b1c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script:
-  - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua.
-  - Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-    ex ea commodo consequat.
-  - Now let's kill some terrorist clowns.
+  scripts:
+  - {fileID: 11400000, guid: 839934ea547539d4e8eb1a66ef35da63, type: 2}
+  - {fileID: 11400000, guid: 20a3f33c985aa0e469606f1c804f8e85, type: 2}
+  - {fileID: 11400000, guid: cdf8037a83c9da946b1a3f2f5f15704c, type: 2}
+  - {fileID: 11400000, guid: 1d0d0400a8fa1eb4b8276c2c216f8e85, type: 2}
+  - {fileID: 11400000, guid: cae82060bd8d5074b9dee07d98d5d788, type: 2}
+  - {fileID: 11400000, guid: c23fe895adee8b947adfd72665698b9b, type: 2}
+  - {fileID: 11400000, guid: 0274134a508fc1e4688930f5a43307b0, type: 2}
+  - {fileID: 11400000, guid: bc0625ab6e2c53d42bcb0b529a02774f, type: 2}
+  - {fileID: 11400000, guid: 182a23bcd3d49ca49ade8b37baa8f282, type: 2}
   text_box: {fileID: 839979946}
   level_loader: {fileID: 2128102998}
   score: {fileID: 985645953}
@@ -402,7 +406,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.756
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11762,7 +11766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeb07dcfb54c224f82271d0b7c56483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug_starting_level: 2
+  debug_starting_level: 1
   levels:
   - {fileID: 5979473603662237548, guid: 490b3d083411934478a5e4231cd679ba, type: 3}
   - {fileID: 5979473603662237548, guid: 292e981f6e98a1644a5b290af87081c9, type: 3}

@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level_name: Dummy
-  narrow_start: 0
+  narrow_start: 1
 --- !u!60 &4987808244833117301
 PolygonCollider2D:
   m_ObjectHideFlags: 0

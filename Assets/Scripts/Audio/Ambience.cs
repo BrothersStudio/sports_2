@@ -14,5 +14,14 @@ public class Ambience : MonoBehaviour
             GetComponent<AudioSource>().loop = true;
             GetComponent<AudioSource>().Play();
         }
+        else
+        {
+            GetComponent<AudioSource>().Stop();
+        }
+    }
+
+    public void Stop()
+    {
+        GetComponent<AudioSource>().Stop();
     }
 }
