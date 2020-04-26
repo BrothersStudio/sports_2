@@ -11,8 +11,9 @@ public class Launch : MonoBehaviour
     public float launch_velocity;
     private float smooth_launch_time = 3;
 
-    private float launch_time;
-    private float click_release_sanctuary = 0.5f;
+    private float current_bounds;
+    private float narrow_start_bounds = 4.4f;
+    private float wide_start_bounds = 9.9f;
 
     private FollowPlayer main_camera;
     private Brush brush;
@@ -21,6 +22,18 @@ public class Launch : MonoBehaviour
     {
         main_camera = Camera.main.GetComponent<FollowPlayer>();
         brush = FindObjectOfType<Brush>();
+    }
+
+    private void Start()
+    {
+        if (FindObjectOfType<Level>().narrow_start)
+        {
+            current_bounds = narrow_start_bounds;
+        }
+        else
+        {
+            current_bounds = wide_start_bounds;
+        }
     }
 
     private void OnMouseDown()
@@ -35,7 +48,7 @@ public class Launch : MonoBehaviour
     {
         if (launching)
         {
-            float x_pos = Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, -4.5f, 4.5f);
+            float x_pos = Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, -current_bounds, current_bounds);
             Vector3 new_pos = new Vector3(x_pos, transform.position.y + Time.deltaTime * current_velocity, transform.position.z);
             GetComponent<Rigidbody2D>().MovePosition(new_pos);
         }
@@ -45,7 +58,6 @@ public class Launch : MonoBehaviour
     {
         Cursor.visible = false;
         launching = true;
-        launch_time = Time.timeSinceLevelLoad;
 
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
 

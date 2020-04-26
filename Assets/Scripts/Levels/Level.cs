@@ -5,4 +5,5 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
     public string level_name;
+    public bool narrow_start;
 }

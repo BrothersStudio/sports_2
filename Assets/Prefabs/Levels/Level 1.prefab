@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level_name: London Winter Olympics, 2010
+  narrow_start: 1
 --- !u!1001 &613389004480242693
 PrefabInstance:
   m_ObjectHideFlags: 0

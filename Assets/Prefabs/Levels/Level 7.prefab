@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level_name: Gumbozo
+  narrow_start: 1
 --- !u!60 &2191035450932947496
 PolygonCollider2D:
   m_ObjectHideFlags: 0

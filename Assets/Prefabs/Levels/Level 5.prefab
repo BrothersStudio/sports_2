@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level_name: Toodle
+  narrow_start: 1
 --- !u!60 &6956725803261430241
 PolygonCollider2D:
   m_ObjectHideFlags: 0

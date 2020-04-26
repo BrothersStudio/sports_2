@@ -46,7 +46,7 @@ public class Ball : MonoBehaviour
         }
 
         GameObject explosion = Instantiate(explosion_prefab, transform.position, transform.rotation);
-        explosion.transform.Translate(new Vector3(-0.5f, 0, 0), Space.Self);
+        explosion.transform.Translate(new Vector3(0.13f, 0.28f, 0), Space.Self);
 
         gameObject.SetActive(false);
     }
