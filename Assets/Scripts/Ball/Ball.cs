@@ -5,7 +5,9 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public List<Sprite> sprites;
+
     bool explosive = false;
+    public GameObject explosion_prefab;
 
     public void SetLevel(int level)
     {
@@ -28,11 +30,19 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.tag != "Ice" && collision.gameObject.tag != "Lines" && explosive)
         {
-            Debug.Log("Explosion!");
+            Detonate();
         }
         else if (collision.gameObject.tag == "Wall")
         {
             GetComponent<BallSounds>().HitWall();
         }
+    }
+
+    public void Detonate()
+    {
+        GameObject explosion = Instantiate(explosion_prefab, transform.position, transform.rotation);
+        explosion.transform.Translate(new Vector3(-0.5f, 0, 0), Space.Self);
+
+        gameObject.SetActive(false);
     }
 }

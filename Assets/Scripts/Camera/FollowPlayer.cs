@@ -96,8 +96,7 @@ public class FollowPlayer : MonoBehaviour
 
     public void EndLevelAnimation()
     {
-        camera_move = false;
-
+        all_focuses.Clear();
         SetFocus(FindObjectOfType<Goal>().transform);
     }
 

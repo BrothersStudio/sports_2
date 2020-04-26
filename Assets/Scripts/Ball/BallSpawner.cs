@@ -105,6 +105,11 @@ public class BallSpawner : MonoBehaviour
         }
     }
 
+    public List<GameObject> GetBalls()
+    {
+        return active_balls;
+    }
+
     public void CleanupBalls()
     {
         foreach (GameObject ball in active_balls)

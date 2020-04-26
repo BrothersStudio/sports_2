@@ -8,7 +8,7 @@ public class PictureAnimate : MonoBehaviour
     private TMP_Animated animatedText;
 
     private bool moved = false;
-    private float move_amount = 20f;
+    private float move_amount = 0.5f;
     private Vector3 default_pos;
 
     void Start()

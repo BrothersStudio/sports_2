@@ -35,7 +35,7 @@ public class TrackScore : MonoBehaviour
         CalculateScore();
     }
 
-    public string CalculateScore()
+    private void CalculateScore()
     {
         float total_score = 0;
         foreach (Transform ball in active_balls)
@@ -48,7 +48,5 @@ public class TrackScore : MonoBehaviour
 
         string score_string = total_score.ToString("0.");
         GetComponent<Text>().text = score_string;
-
-        return score_string;
     }
 }

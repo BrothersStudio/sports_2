@@ -217,6 +217,8 @@ MonoBehaviour:
   - {fileID: 1851895489612097716, guid: e5a51564b4855174cb19fe5f20546623, type: 3}
   - {fileID: 21300000, guid: 95d1e7095a8a60541b3b89724b95dbd8, type: 3}
   - {fileID: 21300000, guid: 4a96c451c29722a4f9d163592e6275a8, type: 3}
+  explosion_prefab: {fileID: 779377707024810836, guid: 6deb17d123344b540b9d1217a35ab7d2,
+    type: 3}
 --- !u!82 &-4998669870578089342
 AudioSource:
   m_ObjectHideFlags: 0

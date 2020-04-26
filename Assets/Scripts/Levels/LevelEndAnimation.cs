@@ -19,8 +19,27 @@ public class LevelEndAnimation : MonoBehaviour
 
     public void Play()
     {
+        StartCoroutine(EndAnimation());
+    }
+
+    private IEnumerator EndAnimation()
+    {
+        // Move camera to goal
         FindObjectOfType<FollowPlayer>().EndLevelAnimation();
 
-        //text_system.Activate();
+        yield return new WaitForSeconds(1);
+
+        // Explode grenades
+        if (current_level > 1)
+        {
+            foreach (GameObject ball in FindObjectOfType<BallSpawner>().GetBalls())
+            {
+                ball.GetComponent<Ball>().Detonate();
+            }
+        }
+
+        yield return new WaitForSeconds(3);
+
+        text_system.Activate();
     }
 }
