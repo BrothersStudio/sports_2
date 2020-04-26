@@ -93,6 +93,17 @@ public class FollowPlayer : MonoBehaviour
             yield return null;
         }
     }
+    
+    public void PauseCamera()
+    {
+        camera_move = false;
+        Invoke("UnpauseCamera", 1.6f);
+    }
+
+    private void UnpauseCamera()
+    {
+        camera_move = true;
+    }
 
     public void EndLevelAnimation()
     {

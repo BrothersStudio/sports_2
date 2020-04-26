@@ -30,7 +30,7 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.tag != "Ice" && collision.gameObject.tag != "Lines" && explosive)
         {
-            Detonate();
+            Detonate(false);
         }
         else if (collision.gameObject.tag == "Wall")
         {
@@ -38,8 +38,13 @@ public class Ball : MonoBehaviour
         }
     }
 
-    public void Detonate()
+    public void Detonate(bool end_of_level)
     {
+        if (!end_of_level)
+        {
+            FindObjectOfType<FollowPlayer>().PauseCamera();
+        }
+
         GameObject explosion = Instantiate(explosion_prefab, transform.position, transform.rotation);
         explosion.transform.Translate(new Vector3(-0.5f, 0, 0), Space.Self);
 
