@@ -34,4 +34,9 @@ public class PictureAnimate : MonoBehaviour
             moved = true;
         }
     }
+
+    private void OnDisable()
+    {
+        transform.position = default_pos;
+    }
 }

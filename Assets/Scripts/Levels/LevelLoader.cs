@@ -30,14 +30,13 @@ public class LevelLoader : MonoBehaviour
             Destroy(current_level);
         }
 
-        text_system.Deactivate();
-
         current_level = Instantiate(levels[level_ind]);
         level_ind++;
 
         current_level.GetComponentInChildren<BallSpawner>().SetCurrentLevel(level_ind);
         level_name_display.TurnOn(current_level.GetComponent<Level>().level_name);
         GetComponent<LevelEndAnimation>().SetCurrentLevel(level_ind);
+        text_system.SetNewLevel(level_ind - 1);
 
         main_cam.SetCurrentLevel(level_ind);
         if (level_ind != 1 || !FindObjectOfType<IntroCinematic>().show_intro)
@@ -47,7 +46,7 @@ public class LevelLoader : MonoBehaviour
 
         // Audio
         FindObjectOfType<Ambience>().SetAmbientSound(level_ind);
-        FindObjectOfType<Music>().SetMusic(level_ind);
+        FindObjectOfType<Music>().SetLevelMusic(level_ind);
 
         score.RecordGoalPosition();
     }
