@@ -35,16 +35,15 @@ public class LevelLoader : MonoBehaviour
         current_level = Instantiate(levels[level_ind]);
         level_ind++;
 
-        // Intro cinematic moves camera on level 1
+        current_level.GetComponentInChildren<BallSpawner>().SetCurrentLevel(level_ind);
+        level_name_display.TurnOn(current_level.GetComponent<Level>().level_name);
+        GetComponent<LevelEndAnimation>().SetCurrentLevel(level_ind);
+
+        main_cam.SetCurrentLevel(level_ind);
         if (level_ind != 1 || !FindObjectOfType<IntroCinematic>().show_intro)
         {
             main_cam.StartNewLevelOverview();
         }
-
-        current_level.GetComponentInChildren<BallSpawner>().SetCurrentLevel(level_ind);
-        level_name_display.TurnOn(current_level.GetComponent<Level>().level_name);
-        main_cam.SetCurrentLevel(level_ind);
-        GetComponent<LevelEndAnimation>().SetCurrentLevel(level_ind);
 
         // Audio
         FindObjectOfType<Ambience>().SetAmbientSound(level_ind);
