@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Level 1
   m_EditorClassIdentifier: 
   script:
-  - This is dialogue for level 1. If you're seeing this, that's good.
-  - Second box for level 1.
+  - <color="red">Clowns</color> are the source of all evil
+  - It's your job to contain them, soldier.
