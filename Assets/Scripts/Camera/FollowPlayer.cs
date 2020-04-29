@@ -78,7 +78,7 @@ public class FollowPlayer : MonoBehaviour
     public void StartNewLevelOverview()
     {
         Vector3 position = FindObjectOfType<Goal>().transform.position;
-        position.z = -10;
+        position.z = transform.position.z;
         transform.position = position;
 
         camera_move = false;
@@ -104,7 +104,7 @@ public class FollowPlayer : MonoBehaviour
 
             t += Time.deltaTime / move_time;
             Vector3 pos = Vector2.Lerp(transform.position, focus.transform.position, SmoothStep(t));
-            pos.z = -10;
+            pos.z = transform.position.z;
             transform.position = pos;
             yield return null;
         }
@@ -216,7 +216,7 @@ public class FollowPlayer : MonoBehaviour
 
 
                 // Speed camera back up if it's caught up with focus
-                Vector3 new_location = new Vector3(new_x, new_y, -10);
+                Vector3 new_location = new Vector3(new_x, new_y, transform.position.z);
                 if (Vector3.Distance(new_location, transform.position) < 0.1f)
                 {
                     StartCoroutine(SlowlySpeedUpCamera());

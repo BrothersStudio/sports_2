@@ -13,8 +13,6 @@ public class TextSystem : MonoBehaviour
     public TMP_Animated text_box;
     public LevelLoader level_loader;
 
-    public GameObject score;
-
     private void Awake()
     {
         text_box.onDialogueFinish.AddListener(() => DoneCurrentText());
@@ -33,9 +31,7 @@ public class TextSystem : MonoBehaviour
         {
             child.gameObject.SetActive(true);
         }
-        score.SetActive(false);
 
-        
         FindObjectOfType<Ambience>().Stop();
 
         ind_displaying = -1;
@@ -93,6 +89,5 @@ public class TextSystem : MonoBehaviour
         {
             child.gameObject.SetActive(false);
         }
-        score.SetActive(true);
     }
 }

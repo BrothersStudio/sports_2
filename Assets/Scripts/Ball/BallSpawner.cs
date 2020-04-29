@@ -15,13 +15,11 @@ public class BallSpawner : MonoBehaviour
     public AudioClip clapping_clip;
 
     private FollowPlayer main_camera;
-    private TrackScore score_tracker;
     private Brush brush;
 
     private void Awake()
     {
         main_camera = FindObjectOfType<FollowPlayer>();
-        score_tracker = FindObjectOfType<TrackScore>();
         brush = FindObjectOfType<Brush>();
     }
 
@@ -45,7 +43,6 @@ public class BallSpawner : MonoBehaviour
         new_ball.GetComponent<Ball>().SetLevel(current_level);
 
         main_camera.RegisterNewBall(new_ball.transform);
-        score_tracker.RegisterNewBall(new_ball.transform);
         brush.RegisterNewBall(new_ball.transform);
 
         return new_ball;

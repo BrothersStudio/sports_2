@@ -12,8 +12,7 @@ public class LevelLoader : MonoBehaviour
 
     public FollowPlayer main_cam;
     public LevelNameDisplay level_name_display;
-
-    public TrackScore score;
+    
     public TextSystem text_system;
 
     private void Awake()
@@ -47,7 +46,5 @@ public class LevelLoader : MonoBehaviour
         // Audio
         FindObjectOfType<Ambience>().SetAmbientSound(level_ind);
         FindObjectOfType<Music>().SetLevelMusic(level_ind);
-
-        score.RecordGoalPosition();
     }
 }
