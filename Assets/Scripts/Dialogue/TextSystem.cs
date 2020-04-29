@@ -35,7 +35,7 @@ public class TextSystem : MonoBehaviour
         }
         score.SetActive(false);
 
-        FindObjectOfType<Music>().SetDialogueMusic();
+        
         FindObjectOfType<Ambience>().Stop();
 
         ind_displaying = -1;
@@ -76,6 +76,12 @@ public class TextSystem : MonoBehaviour
         }
         else
         {
+            Music music = FindObjectOfType<Music>();
+            if (!music.PlayingDialogueMusic())
+            {
+                music.SetDialogueMusic();
+            }
+
             done_current_text = false;
             text_box.ReadText(scripts[current_level].script[ind_displaying]);
         }
