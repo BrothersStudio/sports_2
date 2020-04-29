@@ -38,7 +38,7 @@ public class Ball : MonoBehaviour
                 thing_hit.GetComponent<Goal>().DisableAndCheckDone();
             }
         }
-        else if (thing_hit.tag == "Wall")
+        else if (thing_hit.tag == "Wall" || thing_hit.tag == "Player")
         {
             GetComponent<BallSounds>().HitWall();
         }
