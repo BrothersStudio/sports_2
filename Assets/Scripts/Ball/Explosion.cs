@@ -5,6 +5,7 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     public List<Sprite> sprites;
+    public GameObject clown_in_range = null;
 
     private void Start()
     {
@@ -20,6 +21,13 @@ public class Explosion : MonoBehaviour
             {
                 GetComponent<AudioSource>().enabled = true;
             }
+            else if (i == 13)
+            {
+                if (clown_in_range != null)
+                {
+                    clown_in_range.GetComponent<Goal>().Explode();
+                }
+            }
 
             yield return new WaitForSeconds(0.0666666f);
         }
@@ -27,5 +35,21 @@ public class Explosion : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Clown")
+        {
+            clown_in_range = collision.gameObject;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject == clown_in_range)
+        {
+            clown_in_range = null;
+        }
     }
 }

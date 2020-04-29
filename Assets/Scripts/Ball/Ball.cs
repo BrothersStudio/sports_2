@@ -12,7 +12,7 @@ public class Ball : MonoBehaviour
 
     public void SetLevel(int level)
     {
-        if (level > 4)
+        if (level > 3)
         {
             GetComponent<SpriteRenderer>().sprite = sprites[2];
             explosive = true;

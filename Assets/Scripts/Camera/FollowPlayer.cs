@@ -44,6 +44,9 @@ public class FollowPlayer : MonoBehaviour
 
     public void SetCurrentLevel(int level)
     {
+        // Clear old ball references
+        all_focuses.Clear();
+
         // Can move in x direction?
         if (x_move_allowed_levels.Contains(level))
         {
@@ -55,7 +58,7 @@ public class FollowPlayer : MonoBehaviour
         }
 
         // How long to pause before moving to ball
-        if (level >= 7)
+        if (level >= 6)
         {
             current_pause_time = long_pause_time;
         }
