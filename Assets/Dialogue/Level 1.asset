@@ -13,5 +13,21 @@ MonoBehaviour:
   m_Name: Level 1
   m_EditorClassIdentifier: 
   script:
-  - <color="red">Clowns</color> are the source of all evil
-  - It's your job to contain them, soldier.
+  - 'At ease soldier.
+
+'
+  - "The name is General Stromboli.\r"
+  - 'I heard you were the top slice of the loaf when it comes to sliding rocks on
+    ice.
+
+'
+  - "Well the Army has needs for people like you.\r"
+  - "Tell me, private...\r"
+  - What do you know about <color=#ff004d>clowns</color>?
+  - Clowns have been responsible for every single US military failure for the past
+    half century.
+  - Up until now, they have been able to elude the grasp of the US army due to their
+    superior ice skating skills.
+  - Fortunately, the army has developed new <color=#008751>clown removal technology</color>
+    that is capable of neutralizing this threat.
+  - "Unfortunately, we lack the pilots needed. That\u2019s where you come in."
