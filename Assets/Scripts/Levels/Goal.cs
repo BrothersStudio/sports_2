@@ -10,10 +10,31 @@ public class Goal : MonoBehaviour
     public GameObject body_part;
     private List<GameObject> part_instances = new List<GameObject>();
 
+    public AudioClip bump_sound;
+    public List<AudioClip> death_scream;
+    public List<AudioClip> death_crunch;
+    public AudioSource source_1;
+    public AudioSource source_2;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && !source_1.isPlaying)
+        {
+            source_1.clip = bump_sound;
+            source_1.pitch = Random.Range(0.9f, 1.1f);
+            source_1.Play();
+        }
+    }
+
     public void Explode()
     {
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<CapsuleCollider2D>().enabled = false;
+
+        source_1.clip = death_scream[Random.Range(0, death_scream.Count)];
+        source_1.Play();
+        source_2.clip = death_crunch[Random.Range(0, death_crunch.Count)];
+        source_2.Play();
 
         for (int i = 0; i < 10; i++)
         {

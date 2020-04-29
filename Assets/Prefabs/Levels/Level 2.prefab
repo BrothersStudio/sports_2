@@ -94,6 +94,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5979473603662237549}
     m_Modifications:
+    - target: {fileID: 2326505319000731129, guid: b6d30ff1c8bfd8e418ca7f3ce8533c76,
+        type: 3}
+      propertyPath: death_scream.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326505319000731129, guid: b6d30ff1c8bfd8e418ca7f3ce8533c76,
+        type: 3}
+      propertyPath: death_crunch.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326505319000731129, guid: b6d30ff1c8bfd8e418ca7f3ce8533c76,
+        type: 3}
+      propertyPath: bump_sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 959f1cdc9df89d047852d76153c9f943, type: 3}
+    - target: {fileID: 2326505319000731129, guid: b6d30ff1c8bfd8e418ca7f3ce8533c76,
+        type: 3}
+      propertyPath: death_crunch.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: db55466a3f7e47240b4faf9ab960c686, type: 3}
+    - target: {fileID: 2326505319000731129, guid: b6d30ff1c8bfd8e418ca7f3ce8533c76,
+        type: 3}
+      propertyPath: death_scream.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b687cd413d36114f873926481c5944e, type: 3}
     - target: {fileID: 6504183579250301057, guid: b6d30ff1c8bfd8e418ca7f3ce8533c76,
         type: 3}
       propertyPath: m_LocalPosition.x
