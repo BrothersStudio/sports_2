@@ -161,7 +161,7 @@ public class FollowPlayer : MonoBehaviour
         trauma += amount;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         trauma = Mathf.Clamp01(trauma - 0.01f);
         if (trauma == 0)
