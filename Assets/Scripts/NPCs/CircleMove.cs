@@ -25,6 +25,6 @@ public class CircleMove : MonoBehaviour
         float x = Mathf.Cos(angle) * radius;
         float y = Mathf.Sin(angle) * radius;
 
-        transform.position = new Vector3(starting_x + x, starting_y + y, -4);
+        transform.position = new Vector3(starting_x + x, starting_y + y, -6);
     }
 }
