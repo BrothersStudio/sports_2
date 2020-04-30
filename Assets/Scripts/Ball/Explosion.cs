@@ -5,7 +5,7 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     public List<Sprite> sprites;
-    public GameObject clown_in_range = null;
+    private GameObject clown_in_range = null;
 
     private void Start()
     {
