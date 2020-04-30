@@ -94,4 +94,9 @@ public class Launch : MonoBehaviour
             StopLaunching();
         }
     }
+
+    private void OnDestroy()
+    {
+        Cursor.visible = true;
+    }
 }
