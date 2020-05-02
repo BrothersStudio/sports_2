@@ -1,37 +1,31 @@
 fileFormatVersion: 2
-guid: 0215305b4cc586347893c0fbe9c2e5dd
+guid: 6da41ee13fe543240b68370522f5cd71
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1111337522260746608
-    second: clown_3_idle_0
+      213: 1417514543671201157
+    second: clown_4_idle_0
   - first:
-      213: -6488547644886740208
-    second: clown_3_idle_1
+      213: -2220321720250147246
+    second: clown_4_idle_1
   - first:
-      213: -711608244942508851
-    second: clown_3_idle_2
+      213: -4550492257659445899
+    second: clown_4_idle_2
   - first:
-      213: -1901576951971323936
-    second: clown_3_idle_3
+      213: -5510559973652942346
+    second: clown_4_idle_3
   - first:
-      213: -8513332404772594639
-    second: clown_3_idle_4
+      213: -1544367546787320782
+    second: clown_4_idle_4
   - first:
-      213: 3249720707880861784
-    second: clown_3_idle_0
+      213: 4456592121436002714
+    second: clown_4_idle_5
   - first:
-      213: -8964926333982039656
-    second: clown_3_idle_1
+      213: 4066717059354377279
+    second: clown_4_idle_6
   - first:
-      213: 2993801242290303677
-    second: clown_3_idle_2
-  - first:
-      213: -6049004858525290053
-    second: clown_3_idle_3
-  - first:
-      213: 6426973956010463095
-    second: clown_3_idle_4
+      213: 8045301044850738155
+    second: clown_4_idle_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -141,13 +135,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clown_3_idle_0
+      name: clown_4_idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 30
-        height: 37
+        width: 32
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 850487c14c3591d20800000000000000
-      internalID: 3249720707880861784
+      spriteID: 58dc87797f50ca310800000000000000
+      internalID: 1417514543671201157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clown_3_idle_1
+      name: clown_4_idle_1
       rect:
         serializedVersion: 2
-        x: 30
+        x: 32
         y: 0
-        width: 30
-        height: 37
+        width: 32
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +170,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 891a4795ffe269380800000000000000
-      internalID: -8964926333982039656
+      spriteID: 25ed761c825df21e0800000000000000
+      internalID: -2220321720250147246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clown_3_idle_2
+      name: clown_4_idle_2
       rect:
         serializedVersion: 2
-        x: 60
+        x: 64
         y: 0
-        width: 30
-        height: 37
+        width: 32
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db236d63e5e1c8920800000000000000
-      internalID: 2993801242290303677
+      spriteID: 57d1b05b66769d0c0800000000000000
+      internalID: -4550492257659445899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clown_3_idle_3
+      name: clown_4_idle_3
       rect:
         serializedVersion: 2
-        x: 90
+        x: 96
         y: 0
-        width: 30
-        height: 37
+        width: 32
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +212,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb1fcf2512e9d0ca0800000000000000
-      internalID: -6049004858525290053
+      spriteID: 6f13ee076ee8683b0800000000000000
+      internalID: -5510559973652942346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clown_3_idle_4
+      name: clown_4_idle_4
       rect:
         serializedVersion: 2
-        x: 120
+        x: 128
         y: 0
-        width: 30
-        height: 37
+        width: 32
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,8 +233,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77fc0bce2c2313950800000000000000
-      internalID: 6426973956010463095
+      spriteID: 23ca91b06ed419ae0800000000000000
+      internalID: -1544367546787320782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_4_idle_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a995ff22ceef8dd30800000000000000
+      internalID: 4456592121436002714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_4_idle_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cb6dc7e91ef6830800000000000000
+      internalID: 4066717059354377279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clown_4_idle_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be34869aca6a6af60800000000000000
+      internalID: 8045301044850738155
       vertices: []
       indices: 
       edges: []
