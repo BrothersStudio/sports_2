@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3336779351068430460}
   - component: {fileID: 8851232077373012334}
   - component: {fileID: 8722362863131808631}
+  - component: {fileID: -5896128750604964768}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -88,8 +89,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6629055d39f77c444b3ddb3a3963397e, type: 3}
-  m_Color: {r: 1, g: 0.92549026, b: 0.15294118, a: 1}
+  m_Sprite: {fileID: -5668325850207219026, guid: 91133ec55b691744cafb0e5e7c0ae13a,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -120,3 +122,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &-5896128750604964768
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2237397017984054639}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c520f3221e74c4245bc28caec68d1347, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
