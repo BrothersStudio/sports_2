@@ -20,10 +20,7 @@ public class Explosion : MonoBehaviour
             if (i == 12)
             {
                 GetComponent<AudioSource>().enabled = true;
-                if (GetComponent<Renderer>().isVisible)
-                {
-                    FindObjectOfType<FollowPlayer>().Shake(0.25f);
-                }
+                FindObjectOfType<FollowPlayer>().Shake(0.8f);
             }
             else if (i == 13)
             {

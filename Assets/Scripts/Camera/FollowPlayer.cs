@@ -187,43 +187,41 @@ public class FollowPlayer : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (trauma > 0)
+        {
+            float angle = max_angle * trauma * trauma * Random.Range(-1f, 1f);
+            transform.Rotate(new Vector3(0, 0, angle));
+
+            float offset_x = max_offset * trauma * trauma * Random.Range(-1f, 1f);
+            float offset_y = max_offset * trauma * trauma * Random.Range(-1f, 1f);
+            transform.Translate(new Vector2(offset_x, offset_y));
+        }
+
         if (camera_move)
         {
             FindFocus();
 
-            if (trauma > 0)
+            float new_y = transform.position.y * (1 - current_speed) + focus.position.y * current_speed;
+
+            float new_x;
+            if (!can_x_move || !launched)
             {
-                float angle = max_angle * trauma * trauma * Random.Range(-1f, 1f);
-                transform.Rotate(new Vector3(0, 0, angle));
-
-                float offset_x = max_offset * trauma * trauma * Random.Range(-1f, 1f);
-                float offset_y = max_offset * trauma * trauma * Random.Range(-1f, 1f);
-                transform.Translate(new Vector2(offset_x, offset_y));
+                new_x = default_position.x;
             }
-            else
+            else 
             {
-                float new_y = transform.position.y * (1 - current_speed) + focus.position.y * current_speed;
-
-                float new_x;
-                if (!can_x_move || !launched)
-                {
-                    new_x = default_position.x;
-                }
-                else 
-                {
-                    new_x = transform.position.x * (1 - x_speed) + focus.position.x * x_speed;
-                }
-
-
-                // Speed camera back up if it's caught up with focus
-                Vector3 new_location = new Vector3(new_x, new_y, transform.position.z);
-                if (Vector3.Distance(new_location, transform.position) < 0.1f)
-                {
-                    StartCoroutine(SlowlySpeedUpCamera());
-                }
-
-                transform.position = new_location;
+                new_x = transform.position.x * (1 - x_speed) + focus.position.x * x_speed;
             }
+
+
+            // Speed camera back up if it's caught up with focus
+            Vector3 new_location = new Vector3(new_x, new_y, transform.position.z);
+            if (Vector3.Distance(new_location, transform.position) < 0.1f)
+            {
+                StartCoroutine(SlowlySpeedUpCamera());
+            }
+
+            transform.position = new_location;
         }
     }
 
