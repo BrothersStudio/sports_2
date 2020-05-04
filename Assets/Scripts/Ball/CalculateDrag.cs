@@ -8,6 +8,9 @@ public class CalculateDrag : MonoBehaviour
     private List<float> last_seen_drags = new List<float>();
     private int drag_history_length = 10;
 
+    private bool rpg_mode = false;
+    private float rpg_mode_force = 1;
+
     private void Awake()
     {
         rigidbody = transform.parent.GetComponent<Rigidbody2D>();
@@ -16,6 +19,12 @@ public class CalculateDrag : MonoBehaviour
         {
             last_seen_drags.Add(rigidbody.drag);
         }
+    }
+
+    public void SetRPGMode()
+    {
+        rpg_mode = true;
+        rpg_mode_force = 5;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,7 +36,7 @@ public class CalculateDrag : MonoBehaviour
 
             if (current_ice.brushed)
             {
-                Vector2 force = (current_ice.transform.position - transform.position).normalized * current_ice.brush_force;
+                Vector2 force = (current_ice.transform.position - transform.position).normalized * current_ice.brush_force * rpg_mode_force;
 
                 rigidbody.AddForce(force);
                 if (force.x > 0)
@@ -44,14 +53,17 @@ public class CalculateDrag : MonoBehaviour
 
     private void UpdateDrag(float ice_drag)
     {
-        last_seen_drags.RemoveAt(0);
-        last_seen_drags.Add(ice_drag);
-
-        float sum = 0;
-        foreach (float drag in last_seen_drags)
+        if (!rpg_mode)
         {
-            sum += drag;
+            last_seen_drags.RemoveAt(0);
+            last_seen_drags.Add(ice_drag);
+
+            float sum = 0;
+            foreach (float drag in last_seen_drags)
+            {
+                sum += drag;
+            }
+            rigidbody.drag = sum / (float)drag_history_length;
         }
-        rigidbody.drag = sum / (float)drag_history_length;
     }
 }

@@ -217,6 +217,15 @@ MonoBehaviour:
   - {fileID: 1851895489612097716, guid: e5a51564b4855174cb19fe5f20546623, type: 3}
   - {fileID: 21300000, guid: 95d1e7095a8a60541b3b89724b95dbd8, type: 3}
   - {fileID: 21300000, guid: 4a96c451c29722a4f9d163592e6275a8, type: 3}
+  rocket_sprites:
+  - {fileID: -9136128041466651483, guid: 47f74e277bc859b4a95e02f0aa67d540, type: 3}
+  - {fileID: 7943242760465118759, guid: 47f74e277bc859b4a95e02f0aa67d540, type: 3}
+  - {fileID: -689637076031761063, guid: 47f74e277bc859b4a95e02f0aa67d540, type: 3}
+  - {fileID: -4225048351831560656, guid: 47f74e277bc859b4a95e02f0aa67d540, type: 3}
+  rocket_trail_prefab: {fileID: 6655336617589986484, guid: ba2067d300bd81246bee234a989732cf,
+    type: 3}
+  rocket_clip: {fileID: 8300000, guid: c071fb0b7c099fd49805b8271a9f184c, type: 3}
+  exploded: 0
   explosion_prefab: {fileID: 779377707024810836, guid: 6deb17d123344b540b9d1217a35ab7d2,
     type: 3}
 --- !u!82 &-4998669870578089342
