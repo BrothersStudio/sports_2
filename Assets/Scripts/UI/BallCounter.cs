@@ -36,6 +36,9 @@ public class BallCounter : MonoBehaviour
     public void Countdown()
     {
         current_ball++;
-        counters[counters.Count - current_ball].enabled = false;
+        if (counters.Count - current_ball > 0)
+        {
+            counters[counters.Count - current_ball].enabled = false;
+        }
     }
 }
