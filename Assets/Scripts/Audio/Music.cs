@@ -41,4 +41,9 @@ public class Music : MonoBehaviour
     {
         return playing_dialogue_music;
     }
+
+    public void Stop()
+    {
+        GetComponent<AudioSource>().Stop();
+    }
 }
