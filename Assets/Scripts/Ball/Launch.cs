@@ -62,6 +62,8 @@ public class Launch : MonoBehaviour
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
 
         main_camera.LaunchStart();
+        FindObjectOfType<Tutorial>().Clicked();
+
         StartCoroutine(SmoothVelocity());
     }
 
@@ -82,6 +84,7 @@ public class Launch : MonoBehaviour
         launching = false;
 
         main_camera.LaunchEnd();
+        FindObjectOfType<Tutorial>().Launched();
         brush.Brushing(true);
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, current_velocity);

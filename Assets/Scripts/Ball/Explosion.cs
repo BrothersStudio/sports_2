@@ -40,6 +40,7 @@ public class Explosion : MonoBehaviour
             {
                 if (clown_in_range != null)
                 {
+                    clown_in_range.GetComponent<Goal>().DisableAndCheckDone();
                     clown_in_range.GetComponent<Goal>().Explode();
                 }
             }
@@ -66,6 +67,7 @@ public class Explosion : MonoBehaviour
             {
                 if (clown_in_range != null)
                 {
+                    clown_in_range.GetComponent<Goal>().DisableAndCheckDone();
                     clown_in_range.GetComponent<Goal>().Explode();
                 }
             }

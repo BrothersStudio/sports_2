@@ -33,7 +33,6 @@ public class Field : MonoBehaviour
                 {
                     GameObject ice = ice_pool.GetIce();
                     ice.transform.position = position;
-                    ice.transform.SetParent(transform);
                     ice.SetActive(true);
                     all_ice.Add(ice);
                 }

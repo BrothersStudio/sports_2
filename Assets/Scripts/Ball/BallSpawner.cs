@@ -14,6 +14,7 @@ public class BallSpawner : MonoBehaviour
     public GameObject ball_prefab;
 
     public AudioClip clapping_clip;
+    public GameObject great_effect;
 
     private FollowPlayer main_camera;
     private Brush brush;
@@ -103,6 +104,10 @@ public class BallSpawner : MonoBehaviour
             main_camera.GetComponent<AudioSource>().clip = clapping_clip;
             main_camera.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
             main_camera.GetComponent<AudioSource>().Play();
+
+            FindObjectOfType<Tutorial>().Brushed();
+
+            Instantiate(great_effect, active_balls[active_balls.Count - 1].transform.position + new Vector3(1.5f, 1.2f), Quaternion.identity);
         }
     }
 

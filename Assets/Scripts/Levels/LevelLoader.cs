@@ -23,6 +23,12 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        if (level_ind == 8)
+        {
+            FindObjectOfType<CreditScreen>().Activate();
+            return;
+        }
+
         if (current_level != null)
         {
             current_level.GetComponentInChildren<BallSpawner>().CleanupBalls();
@@ -36,14 +42,12 @@ public class LevelLoader : MonoBehaviour
         current_level.GetComponentInChildren<BallSpawner>().SetCurrentLevel(level_ind);
         level_name_display.TurnOn(current_level.GetComponent<Level>().level_name);
         GetComponent<LevelEndAnimation>().SetCurrentLevel(level_ind);
+        FindObjectOfType<Tutorial>().SetTutorial(level_ind);
         text_system.SetNewLevel(level_ind - 1);
         FindObjectOfType<BallCounter>().SetCurrentLevel(level_ind);
 
         main_cam.SetCurrentLevel(level_ind);
-        if (level_ind != 1 || !FindObjectOfType<IntroCinematic>().show_intro)
-        {
-            main_cam.StartNewLevelOverview();
-        }
+        main_cam.StartNewLevelOverview();
 
         // Audio
         FindObjectOfType<Ambience>().SetAmbientSound(level_ind);

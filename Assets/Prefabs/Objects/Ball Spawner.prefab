@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn_location: {x: 0, y: -20}
+  done_level: 0
   ball_prefab: {fileID: 4848776888593669049, guid: fc3962afda182f24ab3faf3bde054650,
     type: 3}
   clapping_clip: {fileID: 8300000, guid: a08d1823e1291a347a3270f86896e1c7, type: 3}
+  great_effect: {fileID: 3373970072711542282, guid: 62b4597e161f79940b2fbcfdaa6e5535,
+    type: 3}

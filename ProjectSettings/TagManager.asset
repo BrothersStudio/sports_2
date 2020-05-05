@@ -8,6 +8,7 @@ TagManager:
   - Lines
   - Wall
   - Clown
+  - Body Part
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - 
   - 
   - Ice Allowed
-  - 
-  - 
+  - Body Part
+  - Ball
   - 
   - 
   - 
