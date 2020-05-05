@@ -10,7 +10,7 @@ Animator:
   m_GameObject: {fileID: 1273686948637700448}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 154963ad6eb10c9468acce804b43679b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 60cf2ad0167e1b540900a98f660de25b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -42,7 +42,7 @@ Animator:
   m_GameObject: {fileID: 4500933836330887310}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 154963ad6eb10c9468acce804b43679b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 180a6c3671f5dd84da7989e8ffc529d1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -136,7 +136,7 @@ Animator:
   m_GameObject: {fileID: 6174878074500246834}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 154963ad6eb10c9468acce804b43679b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 180a6c3671f5dd84da7989e8ffc529d1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -168,7 +168,7 @@ Animator:
   m_GameObject: {fileID: 6448770801012923360}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 154963ad6eb10c9468acce804b43679b, type: 2}
+  m_Controller: {fileID: 9100000, guid: c6aad4ba382d6b34582dabedf5581cc2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -200,7 +200,7 @@ Animator:
   m_GameObject: {fileID: 8108263352421014621}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 154963ad6eb10c9468acce804b43679b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 60cf2ad0167e1b540900a98f660de25b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -263,7 +263,7 @@ Animator:
   m_GameObject: {fileID: 8952264569755059707}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 154963ad6eb10c9468acce804b43679b, type: 2}
+  m_Controller: {fileID: 9100000, guid: c6aad4ba382d6b34582dabedf5581cc2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -366,7 +366,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1417514543671201157, guid: 6da41ee13fe543240b68370522f5cd71,
+      objectReference: {fileID: 5968732385407668811, guid: d324e018fd04f34438f53aa03742a467,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d30ff1c8bfd8e418ca7f3ce8533c76, type: 3}
@@ -543,7 +543,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1417514543671201157, guid: 6da41ee13fe543240b68370522f5cd71,
+      objectReference: {fileID: -7030702086167944566, guid: 7455e0dff42cc6c48a17fc9c051a84ba,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d30ff1c8bfd8e418ca7f3ce8533c76, type: 3}
@@ -800,7 +800,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1417514543671201157, guid: 6da41ee13fe543240b68370522f5cd71,
+      objectReference: {fileID: 6213938306800213415, guid: de0d31d7fdc3a4c499aa211915a72cc6,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d30ff1c8bfd8e418ca7f3ce8533c76, type: 3}
@@ -977,7 +977,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1417514543671201157, guid: 6da41ee13fe543240b68370522f5cd71,
+      objectReference: {fileID: -7030702086167944566, guid: 7455e0dff42cc6c48a17fc9c051a84ba,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d30ff1c8bfd8e418ca7f3ce8533c76, type: 3}
@@ -1344,7 +1344,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1417514543671201157, guid: 6da41ee13fe543240b68370522f5cd71,
+      objectReference: {fileID: 6213938306800213415, guid: de0d31d7fdc3a4c499aa211915a72cc6,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d30ff1c8bfd8e418ca7f3ce8533c76, type: 3}
@@ -1676,7 +1676,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1417514543671201157, guid: 6da41ee13fe543240b68370522f5cd71,
+      objectReference: {fileID: 5968732385407668811, guid: d324e018fd04f34438f53aa03742a467,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d30ff1c8bfd8e418ca7f3ce8533c76, type: 3}
