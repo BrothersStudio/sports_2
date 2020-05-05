@@ -288,6 +288,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0274134a508fc1e4688930f5a43307b0, type: 2}
   - {fileID: 11400000, guid: bc0625ab6e2c53d42bcb0b529a02774f, type: 2}
   - {fileID: 11400000, guid: 182a23bcd3d49ca49ade8b37baa8f282, type: 2}
+  - {fileID: 11400000, guid: f47a4a7e509b06d4197267f4525a1615, type: 2}
   text_box: {fileID: 839979946}
   level_loader: {fileID: 2128102998}
 --- !u!1 &209618881
@@ -12233,7 +12234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeb07dcfb54c224f82271d0b7c56483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug_starting_level: 1
+  debug_starting_level: 8
   levels:
   - {fileID: 5979473603662237548, guid: 490b3d083411934478a5e4231cd679ba, type: 3}
   - {fileID: 5979473603662237548, guid: 292e981f6e98a1644a5b290af87081c9, type: 3}

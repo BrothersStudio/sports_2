@@ -89,13 +89,9 @@ public class Ball : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject thing_hit = collision.gameObject;
-        if (thing_hit.tag != "Ice" && thing_hit.tag != "Lines" && explosive)
+        if (thing_hit.tag != "Ice" && thing_hit.tag != "Lines" && thing_hit.tag != "Body Part" && explosive)
         {
             Detonate(false);
-            if (thing_hit.tag == "Clown")
-            {
-                thing_hit.GetComponent<Goal>().DisableAndCheckDone();
-            }
         }
         else if (thing_hit.tag == "Wall" || thing_hit.tag == "Player")
         {

@@ -10,7 +10,7 @@ public class FollowPlayer : MonoBehaviour
     private float x_speed = 0.05f;
     private float current_pause_time;
     private float quick_pause_time = 1f;
-    private float long_pause_time = 3f;
+    private float long_pause_time = 1.5f;
     private float move_time = 2f;
 
     private bool launched = false;
@@ -78,7 +78,18 @@ public class FollowPlayer : MonoBehaviour
 
     public void StartNewLevelOverview()
     {
-        Vector3 position = FindObjectOfType<Goal>().transform.position;
+        float max_y = 0;
+        Goal target_goal = null;
+        foreach (Goal goal in FindObjectsOfType<Goal>())
+        {
+            if (goal.transform.position.y > max_y)
+            {
+                max_y = goal.transform.position.y;
+                target_goal = goal;
+            }
+        }
+
+        Vector3 position = target_goal.transform.position;
         position.z = transform.position.z;
         transform.position = position;
 
