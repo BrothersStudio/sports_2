@@ -58,7 +58,7 @@ public class FollowPlayer : MonoBehaviour
         }
 
         // How long to pause before moving to ball
-        if (level >= 6)
+        if (level > 7)
         {
             current_pause_time = long_pause_time;
         }

@@ -52,7 +52,7 @@ public class Ball : MonoBehaviour
 
     private IEnumerator RocketAudioStartDelay()
     {
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(1.5f);
 
         GetComponent<AudioSource>().loop = true;
         GetComponent<AudioSource>().clip = rocket_clip;
