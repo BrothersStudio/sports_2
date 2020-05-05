@@ -7,6 +7,9 @@ public class Brush : MonoBehaviour
     private Rigidbody2D active_ball;
     private Camera main_camera;
 
+    float last_brush = 0;
+    float brush_cooldown = 0.02f;
+
     public bool brushing = false;
     private Vector2 last_mouse_pos;
     private bool left = false;
@@ -15,6 +18,7 @@ public class Brush : MonoBehaviour
     private SpriteRenderer sprite;
 
     public List<AudioClip> brush_sounds;
+    public GameObject ice_prefab;
 
     private void Awake()
     {
@@ -35,7 +39,7 @@ public class Brush : MonoBehaviour
         sprite.enabled = brushing;
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         Vector2 current_mouse_pos = main_camera.ScreenToWorldPoint(Input.mousePosition);
         if ((current_mouse_pos - last_mouse_pos).x < -0.1f)
@@ -54,6 +58,19 @@ public class Brush : MonoBehaviour
             brush_pos.x -= 0.7f;  // offset brush
             brush_pos.z = -9;
             transform.position = brush_pos;
+
+            if (Input.GetMouseButton(0))// && Time.timeSinceLevelLoad > last_brush + brush_cooldown)
+            {
+                if (Physics2D.OverlapCircle(brush_pos + new Vector3(0.7f, 0), 0.05f, 1 << 11) == null)
+                {
+                    last_brush = Time.timeSinceLevelLoad;
+
+                    brush_pos.z = 0;
+                    GameObject ice = Instantiate(ice_prefab, brush_pos + new Vector3(0.7f, 0), Quaternion.identity);
+                    ice.GetComponent<Ice>().SetBrush(this);
+                    ice.GetComponent<Ice>().Brush();
+                }
+            }
         }
     }
 

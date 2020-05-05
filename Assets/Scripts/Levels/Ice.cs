@@ -28,14 +28,6 @@ public class Ice : MonoBehaviour
         this.brush = brush;
     }
 
-    private void OnMouseEnter()
-    {
-        if (Input.GetMouseButton(0) && brush.brushing && !brushed)
-        {
-            Brush();
-        }
-    }
-
     public void Brush(bool init = false)
     {
         brushed = true;
@@ -54,12 +46,7 @@ public class Ice : MonoBehaviour
 
     private void Unbrush()
     {
-        brushed = false;
-        current_friction = starting_friction;
-
-        Color brushed_mask_color = brushed_mask.color;
-        brushed_mask_color.a = 0;
-        brushed_mask.color = brushed_mask_color;
+        Destroy(gameObject);
     }
 
     public float GetDrag()

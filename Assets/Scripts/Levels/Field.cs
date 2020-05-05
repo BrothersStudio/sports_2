@@ -31,19 +31,16 @@ public class Field : MonoBehaviour
                 Vector3 position = new Vector3(j, i, 0);
                 if (IsValidIcePosition(position))
                 {
-                    GameObject ice = ice_pool.GetIce();
-                    ice.transform.position = position;
-                    ice.SetActive(true);
-                    all_ice.Add(ice);
-                }
-            }
-        }
+                    if (Random.value < 0.05f)
+                    {
+                        GameObject ice = ice_pool.GetIce();
+                        ice.transform.position = position;
+                        ice.SetActive(true);
+                        ice.GetComponent<Ice>().Brush(true);
 
-        foreach (GameObject ice in all_ice)
-        {
-            if (Random.value < 0.05f)
-            {
-                ice.GetComponent<Ice>().Brush(true);
+                        all_ice.Add(ice);
+                    }
+                }
             }
         }
     }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5162816323783234436}
   - component: {fileID: 5162816323783234491}
   - component: {fileID: 5162816323783234490}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ice Square
   m_TagString: Ice
   m_Icon: {fileID: 0}
@@ -100,9 +100,8 @@ MonoBehaviour:
   starting_friction: 0.7
   brushed_friction: 0.2
   brushed: 0
-  brush_force: 40
+  brush_force: 60
   brushed_mask: {fileID: 9196330971023016101}
-  neighbors: []
 --- !u!61 &5162816323783234490
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128516870581672766}
   - component: {fileID: 9196330971023016101}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Brushed Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
