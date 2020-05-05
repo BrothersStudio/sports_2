@@ -36,6 +36,7 @@ public class LevelLoader : MonoBehaviour
         level_name_display.TurnOn(current_level.GetComponent<Level>().level_name);
         GetComponent<LevelEndAnimation>().SetCurrentLevel(level_ind);
         text_system.SetNewLevel(level_ind - 1);
+        FindObjectOfType<BallCounter>().SetCurrentLevel(level_ind);
 
         main_cam.SetCurrentLevel(level_ind);
         if (level_ind != 1 || !FindObjectOfType<IntroCinematic>().show_intro)

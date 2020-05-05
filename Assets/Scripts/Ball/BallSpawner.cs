@@ -44,6 +44,7 @@ public class BallSpawner : MonoBehaviour
 
         main_camera.RegisterNewBall(new_ball.transform);
         brush.RegisterNewBall(new_ball.transform);
+        FindObjectOfType<BallCounter>().Countdown();
 
         return new_ball;
     }
@@ -67,6 +68,7 @@ public class BallSpawner : MonoBehaviour
                 Cursor.visible = true;
                 PlayClapping();
 
+                FindObjectOfType<BallCounter>().Countdown();
                 FindObjectOfType<LevelEndAnimation>().Play();
             }
         }
