@@ -10,7 +10,7 @@ public class FollowPlayer : MonoBehaviour
     private float x_speed = 0.05f;
     private float current_pause_time;
     private float quick_pause_time = 1f;
-    private float long_pause_time = 1.5f;
+    private float long_pause_time = 2f;
     private float move_time = 2f;
 
     private bool launched = false;
