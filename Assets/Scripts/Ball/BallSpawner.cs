@@ -7,7 +7,7 @@ public class BallSpawner : MonoBehaviour
     public Vector2 spawn_location;
 
     private int current_level = 0;
-    private bool done_level = false;
+    public bool done_level = false;
     private int ball_count = 0;
     private List<GameObject> active_balls = new List<GameObject>();
     public GameObject ball_prefab;
@@ -55,7 +55,7 @@ public class BallSpawner : MonoBehaviour
         {
             brush.Brushing(false);
 
-            if (active_balls.Count < 3)
+            if (active_balls.Count < 3 && !done_level)
             {
                 Cursor.visible = true;
                 PlayClapping();
@@ -67,8 +67,7 @@ public class BallSpawner : MonoBehaviour
                 done_level = true;
                 Cursor.visible = true;
                 PlayClapping();
-
-                FindObjectOfType<BallCounter>().Countdown();
+                
                 FindObjectOfType<LevelEndAnimation>().Play();
             }
         }
