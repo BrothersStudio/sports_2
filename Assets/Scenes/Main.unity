@@ -167,7 +167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 12657010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -176,20 +176,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 140
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 144
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Some Brothers Studio
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &12657013
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11548,7 +11544,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 9
   m_TargetDisplay: 0
 --- !u!224 &1730347009
 RectTransform:
@@ -12187,7 +12183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeb07dcfb54c224f82271d0b7c56483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug_starting_level: 8
+  debug_starting_level: 1
   levels:
   - {fileID: 5979473603662237548, guid: 490b3d083411934478a5e4231cd679ba, type: 3}
   - {fileID: 5979473603662237548, guid: 292e981f6e98a1644a5b290af87081c9, type: 3}
