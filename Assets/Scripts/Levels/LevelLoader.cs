@@ -26,6 +26,7 @@ public class LevelLoader : MonoBehaviour
         if (current_level != null)
         {
             current_level.GetComponentInChildren<BallSpawner>().CleanupBalls();
+            FindObjectOfType<Field>().CleanupIce();
             Destroy(current_level);
         }
 

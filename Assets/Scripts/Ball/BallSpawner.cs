@@ -7,6 +7,7 @@ public class BallSpawner : MonoBehaviour
     public Vector2 spawn_location;
 
     private int current_level = 0;
+    private bool waiting_to_spawn = false;
     public bool done_level = false;
     private int ball_count = 0;
     private List<GameObject> active_balls = new List<GameObject>();
@@ -25,7 +26,7 @@ public class BallSpawner : MonoBehaviour
 
     private void Start()
     {
-        active_balls.Add(SpawnNewBall());
+        SpawnNewBall();
     }
 
     public void SetCurrentLevel(int current_level)
@@ -33,10 +34,11 @@ public class BallSpawner : MonoBehaviour
         this.current_level = current_level;    
     }
 
-    private GameObject SpawnNewBall()
+    private void SpawnNewBall()
     {
         ball_count++;
         done_level = false;
+        waiting_to_spawn = false;
 
         Vector3 total_spawn_location = new Vector3(spawn_location.x, spawn_location.y, ball_prefab.transform.position.z);
         GameObject new_ball = Instantiate(ball_prefab, total_spawn_location, ball_prefab.transform.rotation);
@@ -46,12 +48,12 @@ public class BallSpawner : MonoBehaviour
         brush.RegisterNewBall(new_ball.transform);
         FindObjectOfType<BallCounter>().Countdown();
 
-        return new_ball;
+        active_balls.Add(new_ball);
     }
 
     private void Update()
     {
-        if (AllBallsDoneMoving())
+        if (AllBallsDoneMoving() && !waiting_to_spawn)
         {
             brush.Brushing(false);
 
@@ -60,7 +62,8 @@ public class BallSpawner : MonoBehaviour
                 Cursor.visible = true;
                 PlayClapping();
 
-                active_balls.Add(SpawnNewBall());
+                waiting_to_spawn = true;
+                Invoke("SpawnNewBall", 1.7f);
             }
             else if (!done_level)
             {

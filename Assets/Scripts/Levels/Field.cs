@@ -10,15 +10,18 @@ public class Field : MonoBehaviour
     public GameObject ice_square;
 
     private Brush brush;
+    private IcePool ice_pool;
+    private List<GameObject> all_ice;
 
     private void Awake()
     {
         brush = FindObjectOfType<Brush>();
+        ice_pool = FindObjectOfType<IcePool>();
     }
 
     private void Start()
     {
-        List<GameObject> all_ice = new List<GameObject>();
+        all_ice = new List<GameObject>();
         float x_distance = ice_square.GetComponent<Ice>().size / 100f;
         float y_distance = ice_square.GetComponent<Ice>().size / 100f;
         for (float i = lower_left_point.y; i < upper_right_point.y; i += y_distance)
@@ -28,9 +31,10 @@ public class Field : MonoBehaviour
                 Vector3 position = new Vector3(j, i, 0);
                 if (IsValidIcePosition(position))
                 {
-                    GameObject ice = Instantiate(ice_square, position, Quaternion.identity, transform);
-                    ice.name = "Ice " + j.ToString() + " " + i.ToString();
-                    ice.GetComponent<Ice>().SetBrush(brush);
+                    GameObject ice = ice_pool.GetIce();
+                    ice.transform.position = position;
+                    ice.transform.SetParent(transform);
+                    ice.SetActive(true);
                     all_ice.Add(ice);
                 }
             }
@@ -38,7 +42,6 @@ public class Field : MonoBehaviour
 
         foreach (GameObject ice in all_ice)
         {
-            ice.GetComponent<Ice>().CalculateNeighbors();
             if (Random.value < 0.05f)
             {
                 ice.GetComponent<Ice>().Brush(true);
@@ -55,6 +58,14 @@ public class Field : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+
+    public void CleanupIce()
+    {
+        foreach (GameObject ice in all_ice)
+        {
+            ice.SetActive(false);
         }
     }
 }

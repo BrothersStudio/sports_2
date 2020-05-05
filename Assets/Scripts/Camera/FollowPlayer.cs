@@ -40,6 +40,7 @@ public class FollowPlayer : MonoBehaviour
         
         x_move_allowed_levels.Add(2);
         x_move_allowed_levels.Add(3);
+        x_move_allowed_levels.Add(8);
     }
 
     public void SetCurrentLevel(int level)

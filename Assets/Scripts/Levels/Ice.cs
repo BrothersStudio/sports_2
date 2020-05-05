@@ -16,46 +16,11 @@ public class Ice : MonoBehaviour
     public SpriteRenderer brushed_mask;
     private float unbrush_time = 10;
 
-    public List<Ice> neighbors = new List<Ice>();
-    private List<Vector3> neighbor_vectors = new List<Vector3>();
-
     private void Start()
     {
         transform.localScale = new Vector3(size, size, 1);
 
         current_friction = starting_friction;
-
-        neighbor_vectors.Add(new Vector2(0, size / 100f));                            // north
-        neighbor_vectors.Add(new Vector2(size / 100f * 1.4f, size / 100f * 1.4f));    // northeast
-        neighbor_vectors.Add(new Vector2(size / 100f, 0));                            // east
-        neighbor_vectors.Add(new Vector2(size / 100f * 1.4f, size / 100f * -1.4f));   // southeast
-        neighbor_vectors.Add(new Vector2(0, -size / 100f));                           // south
-        neighbor_vectors.Add(new Vector2(size / 100f * -1.4f, size / 100f * -1.4f));  // southwest
-        neighbor_vectors.Add(new Vector2(size / 100f * -1.4f, 0));                    // west
-        neighbor_vectors.Add(new Vector2(size / 100f * -1.4f, size / 100f * 1.4f));   // northwest
-    }
-
-    public void CalculateNeighbors()
-    {
-        foreach (Vector3 vector in neighbor_vectors)
-        {
-            bool found_ice = false;
-            Collider2D[] colliders = Physics2D.OverlapPointAll(transform.position + vector);
-            foreach (Collider2D collider in colliders)
-            {
-                if (collider.tag == "Ice")
-                {
-                    neighbors.Add(collider.GetComponent<Ice>());
-                    found_ice = true;
-                    break;
-                }
-            }
-
-            if (!found_ice)
-            {
-                neighbors.Add(null);
-            }
-        }
     }
 
     public void SetBrush(Brush brush)
@@ -83,7 +48,7 @@ public class Ice : MonoBehaviour
         }
 
         Color brushed_mask_color = brushed_mask.color;
-        brushed_mask_color.a = GetBrushedNeighbors() / 9f;
+        brushed_mask_color.a = 1/9f;
         brushed_mask.color = brushed_mask_color;
     }
 
@@ -93,30 +58,8 @@ public class Ice : MonoBehaviour
         current_friction = starting_friction;
 
         Color brushed_mask_color = brushed_mask.color;
-        brushed_mask_color.a = GetBrushedNeighbors() / 9f;
+        brushed_mask_color.a = 0;
         brushed_mask.color = brushed_mask_color;
-    }
-
-    private int GetBrushedNeighbors()
-    {
-        int count = 0;
-        foreach (Ice ice in neighbors)
-        {
-            if (ice != null)
-            {
-                if (ice.brushed)
-                {
-                    count++;
-                }
-            }
-        }
-
-        if (brushed)
-        {
-            count++;
-        }
-
-        return count;
     }
 
     public float GetDrag()
