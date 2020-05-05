@@ -68,13 +68,19 @@ public class BallSpawner : MonoBehaviour
             }
             else if (!done_level)
             {
-                done_level = true;
+                DoneLevel();
                 Cursor.visible = true;
                 PlayClapping();
                 
                 FindObjectOfType<LevelEndAnimation>().Play();
             }
         }
+    }
+
+    public void DoneLevel()
+    {
+        CancelInvoke();
+        done_level = true;
     }
 
     private bool AllBallsDoneMoving()

@@ -19,8 +19,8 @@ public class LevelEndAnimation : MonoBehaviour
 
     public void Play()
     {
+        FindObjectOfType<BallSpawner>().DoneLevel();
         FindObjectOfType<BallCounter>().Countdown();
-        FindObjectOfType<BallSpawner>().done_level = true;
         StartCoroutine(EndAnimation());
     }
 
